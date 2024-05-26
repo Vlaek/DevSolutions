@@ -1,0 +1,21 @@
+@import '@/shared/styles/variables';
+
+.faq {
+  padding: 50px 100px;
+
+  &__title {
+    font-size: 48px;
+    color: $main-white;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    color: $main-light-gray;
+  }
+
+  &__list {
+    margin-top: 50px;
+    width: 1000px;
+    margin: 0 auto;
+  }
+}

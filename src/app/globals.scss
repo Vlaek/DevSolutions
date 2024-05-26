@@ -1,0 +1,47 @@
+@import '@/shared/styles/variables';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+body,
+html {
+  background-color: $main-black;
+  color: $main-white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}

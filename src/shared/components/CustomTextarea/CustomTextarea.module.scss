@@ -1,0 +1,51 @@
+@import '@/shared/styles/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid $main-medium-gray;
+  position: relative;
+  padding-bottom: 10px;
+
+  &:hover {
+    border-color: $main-white;
+  }
+
+  &:focus-within {
+    border-color: $main-orange;
+
+    .label {
+      font-size: 12px;
+      transform: translateY(-65%);
+    }
+  }
+}
+
+.label {
+  position: absolute;
+  font-size: 18px;
+  top: calc(50% - 54px);
+  padding: 0 20px;
+  color: $main-medium-gray;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  user-select: none;
+
+  &_active {
+    font-size: 12px;
+    transform: translateY(-65%);
+  }
+}
+
+.textarea {
+  padding: 30px 20px 0 20px;
+  height: 100%;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  color: $main-white;
+  font-weight: 400;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+}

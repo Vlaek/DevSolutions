@@ -1,0 +1,50 @@
+@import '@/shared/styles/variables';
+
+.item {
+  margin-bottom: 16px;
+  border-bottom: 2px solid $main-medium-gray;
+
+  &__header {
+    position: relative;
+    width: 100%;
+    padding: 20px 60px 20px 30px;
+    border: 0;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  &__collapse {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+
+    .open {
+      height: auto;
+    }
+  }
+
+  &__body {
+    padding: 30px 60px 30px 30px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    font-size: 16px;
+    color: $main-white;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: block;
+    font-size: 36px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+
+    &_active {
+      transform: translateY(-50%) scale(1, -1);
+    }
+  }
+}

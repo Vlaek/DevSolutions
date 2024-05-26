@@ -1,0 +1,25 @@
+.layout {
+  display: grid;
+  grid-template-areas:
+    'h'
+    'm'
+    'f';
+  grid-template-columns: 100%;
+  grid-template-rows: 90px 1fr 240px;
+  column-gap: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+.header {
+  grid-area: h;
+}
+
+.main {
+  grid-area: m;
+  width: 100%;
+}
+
+.footer {
+  grid-area: f;
+}
