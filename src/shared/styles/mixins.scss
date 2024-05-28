@@ -1,0 +1,16 @@
+@import '@/shared/styles/variables';
+
+@mixin button-send {
+  width: 100%;
+  height: 70px;
+  background-color: $main-orange;
+  color: $main-white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 10px;
+  user-select: none;
+
+  &:hover {
+    background-color: $main-dark-orange;
+  }
+}
