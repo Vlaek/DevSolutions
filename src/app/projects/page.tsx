@@ -1,13 +1,13 @@
 import { Metadata } from 'next'
-import Contacts from './Contacts'
+import Projects from './Projects'
 
 export const metadata: Metadata = {
-  title: 'Contacts',
+  title: 'Projects',
   authors: [{ name: 'Vladislav Eichwald', url: 'https://github.com/Vlaek' }],
-  description: 'Contacts Page',
+  description: 'Projects Page',
   icons: './next.svg',
 }
 
 export default async function Page() {
-  return <Contacts />
+  return <Projects />
 }

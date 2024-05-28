@@ -35,4 +35,4 @@ const Accordion: FC<IAccordion> = (props) => {
   )
 }
 
-export default Accordion
+export { Accordion }

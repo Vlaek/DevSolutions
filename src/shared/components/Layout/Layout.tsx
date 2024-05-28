@@ -19,4 +19,4 @@ const Layout: FC<ILayoutProps> = (props) => {
   )
 }
 
-export default Layout
+export { Layout }

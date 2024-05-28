@@ -1,0 +1,15 @@
+@import '@/shared/styles/variables';
+
+.container {
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: 48px;
+  color: $main-white;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: $main-light-gray;
+}

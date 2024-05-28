@@ -1,0 +1,44 @@
+@import '@/shared/styles/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 20px 60px;
+
+  &__block {
+    &_right {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+  }
+
+  &__icon {
+    background-color: $main-white;
+    border: 3px solid $main-white;
+    width: 200px;
+    height: 50px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $main-orange;
+      border-color: $main-orange;
+      transform: scale(1.02);
+    }
+  }
+
+  &__button {
+    border: 1px solid $main-medium-gray;
+    width: 75px;
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 40px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $main-orange;
+    }
+  }
+}
