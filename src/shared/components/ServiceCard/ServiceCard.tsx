@@ -2,6 +2,7 @@ import { FC } from 'react'
 import styles from './ServiceCard.module.scss'
 import classNames from 'classnames'
 import { ICard } from '@/shared/types/models'
+import StackList from '../StackList/StackList'
 
 interface IServiceCardProps {
   isOrange?: boolean
@@ -33,16 +34,8 @@ const ServiceCard: FC<IServiceCardProps> = (props) => {
         </div>
         <div className={styles.card__footer}>
           <div className={styles.card__desc}>
-          <div>{item.description}</div>
-          {item.stack && (
-            <ul className={styles.card__stack}>
-              {item.stack.map((stackItem) => (
-                <li className={styles.card__stack__item} key={stackItem}>
-                  {stackItem}
-                </li>
-              ))}
-            </ul>
-          )}
+            <div>{item.description}</div>
+            <StackList stack={item.stack} />
           </div>
 
           <button

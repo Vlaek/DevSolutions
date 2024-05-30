@@ -1,0 +1,15 @@
+@import '@/shared/styles/variables';
+
+.stack {
+  display: flex;
+  gap: 15px;
+
+  &__item {
+    padding: 5px 15px;
+    font-size: 14px;
+    line-height: 140%;
+    color: $main-white;
+    border: 1px solid $main-white;
+    border-radius: 40px;
+  }
+}
