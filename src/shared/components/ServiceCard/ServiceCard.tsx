@@ -1,8 +1,11 @@
+'use client'
+
 import { FC } from 'react'
 import styles from './ServiceCard.module.scss'
 import classNames from 'classnames'
 import { ICard } from '@/shared/types/models'
 import StackList from '../StackList/StackList'
+import { useRouter } from 'next/navigation'
 
 interface IServiceCardProps {
   isOrange?: boolean
@@ -16,6 +19,13 @@ const formatId = (id: number): string => {
 
 const ServiceCard: FC<IServiceCardProps> = (props) => {
   const { item, isOrange = false, id } = props
+  const router = useRouter()
+  const onClickHandle = () => {
+    if (item.url) {
+      router.push(`/services/${item.url}`)
+    }
+  }
+
   return (
     <div
       className={classNames(
@@ -25,6 +35,7 @@ const ServiceCard: FC<IServiceCardProps> = (props) => {
         },
         { [styles.card_has_url]: Boolean(item?.url) },
       )}
+      onClick={onClickHandle}
     >
       <div className={styles.card__content}>
         <div className={styles.card__header}>

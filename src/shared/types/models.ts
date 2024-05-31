@@ -9,5 +9,6 @@ export interface ICard {
   description: string
   videoUrl: string
   url?: string
+  full_stack?: string[]
   stack?: string[]
 }

@@ -1,0 +1,56 @@
+@import '@/shared/styles/variables';
+
+.card {
+  &__header {
+    &__title {
+      font-size: 60px;
+      font-weight: bold;
+      color: $main-white;
+    }
+
+    &__desc {
+      font-size: 30px;
+      color: $main-medium-gray;
+    }
+  }
+
+  &__stack {
+    margin-top: 70px;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 995px;
+      row-gap: 32px;
+      column-gap: 40px;
+
+      &__item {
+        min-width: 100px;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+
+
+    &__title {
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 90px;
+    }
+  }
+
+  &__projects {
+    margin: 127px 0;
+
+    &__title {
+      font-size: 38px;
+      font-weight: bold;
+    }
+  }
+
+  &__contacts {
+    margin: 150px 0 50px;
+  }
+}
