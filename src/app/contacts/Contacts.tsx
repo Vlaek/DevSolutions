@@ -1,62 +1,42 @@
 'use client'
 
-import { FC, useState } from 'react'
+import { FC } from 'react'
+import { ContactsForm, Title } from '@/shared/components'
 import styles from './Contacts.module.scss'
-import { CustomInput, CustomTextarea } from '@/shared/components/index'
-
-const initialValue = {
-  name: '',
-  age: null,
-  email: '',
-  about: '',
-}
+import Image from 'next/image'
 
 const Contacts: FC = () => {
-  const [state, setState] = useState(initialValue)
-
-  const onDataByKeyChange = (value: string | number | boolean | null, key: string): void => {
-    setState({ ...state, [key]: value })
-  }
-
   return (
-    <div className={styles.products}>
-      <div className={styles.form}>
-        <div className={styles.form__header}>
-          <h2 className={styles.form__header__title}>
-            У вас есть <span className={styles.form__header__title_orange}>проект</span> {'или '}
-            <span className={styles.form__header__title_orange}>идея</span> для реализации?
-          </h2>
-          <p className={styles.form__header__text}>
-            Оставьте свои контактные данные, и наш HR-менеджер свяжется с вами для уточнения деталей
+    <div className={styles.contacts}>
+      <Title title='Работа у нас' subtitle='Присоединяйтесь к нам' />
+      <section className={styles.contacts__desc}>
+        <div className={styles.contacts__desc__text}>
+          <p>
+            <span>DevSolutions</span> - аккредитованная IT-компания. Мы занимаемся заказной
+            разработкой программного обеспечения.
+          </p>
+          <p>
+            Наш профиль – это <span>разработка</span> веб и мобильных приложений, а также
+            программного обеспечения для терминалов. Мы предоставляем полный цикл разработки ПО – от
+            сбора требований заказчика до пострелизного сопровождения продукта, для этого у нас есть
+            специалисты всех уровней.
+          </p>
+          <p>
+            Главная цель команды - <span>вникнуть</span> в суть каждой задачи, которая поступает от
+            нашего клиента, чтобы предложить ему лучшее решение для его <span>бизнеса</span>.
           </p>
         </div>
-        <CustomInput
-          value={state.name}
-          placeholder='Представьтесь, пожалуйста'
-          keyValue='name'
-          onDataByKeyChange={onDataByKeyChange}
+        <Image
+          src='/img/job.webp'
+          alt='img'
+          className={styles.contacts__desc__img}
+          width={200}
+          height={200}
+          draggable={false}
+          aria-hidden={true}
         />
-        <CustomInput
-          value={state.email}
-          placeholder='E-mail'
-          keyValue='email'
-          onDataByKeyChange={onDataByKeyChange}
-        />
-        <CustomTextarea
-          value={state.about}
-          placeholder='Кратко опишите свой проект'
-          keyValue='about'
-          type='text'
-          onDataByKeyChange={onDataByKeyChange}
-        />
-        <div className={styles.form__footer}>
-          <p className={styles.form__footer__text}>
-            Нажимая кнопку «Отправить», я соглашаюсь с политикой конфиденциальности и обработки
-            персональных данных
-          </p>
-          <button className={styles.form__footer__button}>Отправить</button>
-        </div>
-      </div>
+      </section>
+      <ContactsForm />
     </div>
   )
 }

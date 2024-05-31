@@ -127,3 +127,15 @@ export const serviceList: IService[] = [
     },
   },
 ]
+
+interface IProject {
+  title: string
+  subtitle: string
+  description: string
+  category: string[]
+  stack: string[]
+}
+
+export const projectList = [
+  // title: string;
+]

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { serviceList } from './../../../shared/components/ServiceCard/data'
+import { serviceList } from '../../../shared/data'
 import NotFound from '@/app/not-found'
 import { Metadata } from 'next'
 import { helperString } from '@/shared/helpers'

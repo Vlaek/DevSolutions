@@ -1,9 +1,7 @@
-import { Title } from '@/shared/components'
 import { FC } from 'react'
+import { ContactsForm, ServiceCard, Title } from '@/shared/components'
+import { serviceList } from '@/shared/data'
 import styles from './Services.module.scss'
-import ServiceCard from '@/shared/components/ServiceCard/ServiceCard'
-import { serviceList } from '@/shared/components/ServiceCard/data'
-import Contacts from '../contacts/Contacts'
 
 const Services: FC = () => {
   return (
@@ -19,7 +17,7 @@ const Services: FC = () => {
           />
         ))}
       </div>
-      <Contacts />
+      <ContactsForm />
     </>
   )
 }

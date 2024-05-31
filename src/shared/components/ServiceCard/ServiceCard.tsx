@@ -4,8 +4,8 @@ import { FC } from 'react'
 import styles from './ServiceCard.module.scss'
 import classNames from 'classnames'
 import { ICard } from '@/shared/types/models'
-import StackList from '../StackList/StackList'
 import { useRouter } from 'next/navigation'
+import { StackList } from '../StackList/StackList'
 
 interface IServiceCardProps {
   isOrange?: boolean
@@ -70,4 +70,4 @@ const ServiceCard: FC<IServiceCardProps> = (props) => {
   )
 }
 
-export default ServiceCard
+export { ServiceCard }

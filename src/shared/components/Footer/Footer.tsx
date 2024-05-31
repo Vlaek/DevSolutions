@@ -31,16 +31,24 @@ const Footer: FC = () => {
       </div>
       <div className={styles.links}>
         <div className={styles.links__icon}>
-          <FaGithub />
+          <Link href='https://github.com/Vlaek' target='blank'>
+            <FaGithub />
+          </Link>
         </div>
         <div className={styles.links__icon}>
-          <FaTelegram />
+          <Link href='https://github.com/Vlaek' target='blank'>
+            <FaTelegram />
+          </Link>
         </div>
         <div className={styles.links__icon}>
-          <FaVk />
+          <Link href='https://github.com/Vlaek' target='blank'>
+            <FaVk />
+          </Link>
         </div>
         <div className={styles.links__icon}>
-          <FaLinkedin />
+          <Link href='https://github.com/Vlaek' target='blank'>
+            <FaLinkedin />
+          </Link>
         </div>
       </div>
     </div>

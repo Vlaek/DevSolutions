@@ -21,4 +21,4 @@ const StackList: FC<IStackListProps> = (props) => {
   )
 }
 
-export default StackList
+export {StackList}

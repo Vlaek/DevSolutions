@@ -2,7 +2,7 @@ import { ICard } from '@/shared/types/models'
 import { FC } from 'react'
 import styles from './ServicePage.module.scss'
 import { helperString } from '@/shared/helpers'
-import Contacts from '@/app/contacts/Contacts'
+import { ContactsForm } from '@/shared/components'
 
 interface ServicePageProps {
   card: ICard
@@ -33,7 +33,7 @@ const ServicePage: FC<ServicePageProps> = (props) => {
         <div className={styles.card__projects__container}>da</div>
       </section>
       <section className={styles.card__contacts}>
-        <Contacts />
+        <ContactsForm />
       </section>
     </div>
   )

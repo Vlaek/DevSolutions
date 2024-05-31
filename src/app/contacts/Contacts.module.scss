@@ -1,42 +1,27 @@
 @import '@/shared/styles/variables';
 @import '@/shared/styles/mixins';
 
-.products {
-  width: 100%;
-  color: $main-white;
-  padding: 50px;
-}
+.contacts {
+  &__desc {
+    display: flex;
+    gap: 80px;
 
-.form {
-  display: flex;
-  flex-direction: column;
-  row-gap: 25px;
-  width: 700px;
-  margin: 0 auto;
-
-  &__header {
-    &__title {
+    &__text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 48px;
       font-size: 30px;
-      margin-bottom: 20px;
 
-      &_orange {
+      span {
         color: $main-orange;
       }
     }
 
-    &__text {
-      font-size: 16px;
-    }
-  }
-
-  &__footer {
-    &__text {
-      color: $main-light-gray;
-      margin-bottom: 20px;
-    }
-
-    &__button {
-      @include button-send;
+    &__img {
+      width: 550px;
+      height: 550px;
+      mix-blend-mode: lighten;
+      color: transparent;
     }
   }
 }

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Jost } from 'next/font/google'
 import { Layout, Header, Footer } from '@/shared/components/index'
 import './globals.scss'
 
-const fontStyle = Montserrat({ subsets: ['latin'], weight: ['400', '900'] })
+const fontStyle = Jost({ subsets: ['latin'], weight: ['400', '900'] })
 
 export const metadata: Metadata = {
   title: 'Main Page',

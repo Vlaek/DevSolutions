@@ -3,8 +3,7 @@
 import { FC } from 'react'
 import styles from './FAQ.module.scss'
 import { list } from './data'
-import Contacts from '../contacts/Contacts'
-import { Accordion, Title } from '@/shared/components'
+import { Accordion, ContactsForm, Title } from '@/shared/components'
 
 const FAQ: FC = () => {
   return (
@@ -16,7 +15,7 @@ const FAQ: FC = () => {
       <section className={styles.faq__list}>
         <Accordion list={list} />
       </section>
-      <Contacts />
+      <ContactsForm />
     </div>
   )
 }
