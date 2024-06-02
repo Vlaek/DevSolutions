@@ -13,6 +13,7 @@ import { StackList } from './StackList/StackList'
 import { Title } from './Title/Title'
 import { VacancyList } from './VacancyList/VacancyList'
 import { WorkForm } from './WorkForm/WorkForm'
+import { WorkingCondition } from './WorkingCondition/WorkingCondition'
 
 export {
   AboutUsCard,
@@ -30,4 +31,5 @@ export {
   Title,
   VacancyList,
   WorkForm,
+  WorkingCondition,
 }

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const WorkPage: FC<IWorkPageParams> = ({ params }) => {
   console.log(params.id)
   const vacancy = (() => {
-    return vacancies.find((item) => item.id === params.id) || null
+    return vacancies.find((item) => item.id === +params.id) || null
   })()
 
   if (vacancy === null) {

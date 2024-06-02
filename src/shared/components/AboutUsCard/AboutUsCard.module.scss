@@ -22,21 +22,28 @@
       border: 1px solid $main-orange;
 
       &__title {
-        font-size: 38px;
+        font-size: 32px;
         font-weight: bold;
         text-align: center;
         color: $main-white;
+        margin-bottom: 15px;
       }
 
       &__subtitle {
         font-size: 18px;
         color: $main-medium-gray;
+        min-height: 75px;
       }
 
       &__img {
         display: flex;
         justify-content: center;
         align-items: flex-end;
+
+        &__item {
+          width: 340px;
+          height: 300px;
+        }
       }
     }
   }

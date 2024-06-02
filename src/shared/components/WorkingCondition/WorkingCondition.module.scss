@@ -1,0 +1,44 @@
+@import '@/shared/styles/variables';
+
+.condition {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-top: clamp(32px, 16.6666666667vw - 64px, 64px);
+  margin-bottom: clamp(32px, 16.6666666667vw - 64px, 64px);
+
+  &__title {
+    font-size: 28px;
+    font-weight: bold;
+    color: $main-white;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    color: $main-white;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    &__item {
+      display: flex;
+      font-size: 20px;
+      color: $main-light-gray;
+
+      &::before {
+        width: 6px;
+        height: 6px;
+        background-color: $main-orange;
+        border-radius: 3px;
+        content: "";
+        display: inline-block;
+        margin-right: 8px;
+        align-self: center;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
