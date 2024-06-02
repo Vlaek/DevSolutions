@@ -1,0 +1,28 @@
+@import '@/shared/styles/variables';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(40px, 5vw + 4px, 60px);
+  margin: 140px 0 0;
+
+  &__title {
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: clamp(40px, 5vw + 4px, 60px);
+    gap: clamp(40px, 5vw + 4px, 60px);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .about {
+    &__cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

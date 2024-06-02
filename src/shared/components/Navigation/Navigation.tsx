@@ -31,15 +31,17 @@ const list: INavigation[] = [
 ]
 
 const Navigation: FC = () => {
-  return list.map((item) => (
-    <nav className={styles.nav} key={item.name}>
+  return (
+    <nav className={styles.nav}>
       <ul className={styles.nav__list}>
-        <li className={styles.nav__list__item}>
-          <Link href={item.link}>{item.name}</Link>
-        </li>
+        {list.map((item) => (
+          <li className={styles.nav__list__item} key={item.name}>
+            <Link href={item.link}>{item.name}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
-  ))
+  )
 }
 
 export { Navigation }

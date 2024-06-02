@@ -3,9 +3,9 @@ import { serviceList } from '../../../shared/data'
 import NotFound from '@/app/not-found'
 import { Metadata } from 'next'
 import { helperString } from '@/shared/helpers'
-import ServicePage from './ServicePage'
+import Service from './Service'
 
-interface IProductPageParams {
+interface IServicePageParams {
   params: {
     slug: string
   }
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   icons: './next.svg',
 }
 
-const ProductPage: FC<IProductPageParams> = ({ params }) => {
+const ServicePage: FC<IServicePageParams> = ({ params }) => {
   const service = (() => {
     return serviceList.find((item) => item.card.url === params.slug) || null
   })()
@@ -31,7 +31,7 @@ const ProductPage: FC<IProductPageParams> = ({ params }) => {
   metadata.title = helperString.capitalizeFirstLetterOfEachWord(card.title || 'Service')
   metadata.description = card.description || 'Service Page'
 
-  return <ServicePage card={card} />
+  return <Service card={card} />
 }
 
-export default ProductPage
+export default ServicePage

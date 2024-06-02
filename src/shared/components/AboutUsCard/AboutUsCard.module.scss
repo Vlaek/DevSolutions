@@ -1,0 +1,43 @@
+@import '@/shared/styles/variables';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(40px, 4.6296296296vw + 4.4444444444px, 60px);
+  margin: 140px 0 0;
+
+  &__title {
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+      padding: 32px;
+      border-radius: 10px;
+      border: 1px solid $main-orange;
+
+      &__title {
+        font-size: 38px;
+        font-weight: bold;
+        text-align: center;
+        color: $main-white;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        color: $main-medium-gray;
+      }
+
+      &__img {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+    }
+  }
+}

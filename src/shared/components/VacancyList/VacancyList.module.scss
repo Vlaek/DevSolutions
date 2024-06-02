@@ -1,0 +1,68 @@
+@import '@/shared/styles/variables';
+
+.jobs {
+  margin-top: 140px;
+
+  &__title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    &__title {
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 100px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(412px, 100%), 1fr));
+    grid-gap: 25px;
+    gap: 25px;
+
+    &__item {
+      padding: 24px;
+      background-image: radial-gradient(98.88% 98.88% at 100% 0, rgba(242, 222, 45, .1) 0, transparent 100%);
+      border-radius: 10px;
+      border: 1px solid $main-gray;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: $main-orange;
+        background-color: $main-dark-gray;
+      }
+
+      &__title {
+        font-size: 24px;
+        font-weight: bold;
+        color: $main-white;
+      }
+
+      &__subtitle {
+        color: $main-light-gray;
+        margin-bottom: 30px;
+        font-size: 18px;
+      }
+
+      &__level {
+        font-size: 18px;
+        font-weight: bold;
+        color: $main-white;
+      }
+    }
+  }
+}

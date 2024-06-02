@@ -1,3 +1,5 @@
+import { AboutUsCard } from './AboutUsCard/AboutUsCard'
+import { AboutUsCardList } from './AboutUsCardList/AboutUsCardList'
 import { Accordion } from './Accordion/Accordion'
 import { ContactsForm } from './ContactsForm/ContactsForm'
 import { CustomInput } from './CustomInput/CustomInput'
@@ -9,9 +11,12 @@ import { Navigation } from './Navigation/Navigation'
 import { ServiceCard } from './ServiceCard/ServiceCard'
 import { StackList } from './StackList/StackList'
 import { Title } from './Title/Title'
+import { VacancyList } from './VacancyList/VacancyList'
 import { WorkForm } from './WorkForm/WorkForm'
 
 export {
+  AboutUsCard,
+  AboutUsCardList,
   Accordion,
   ContactsForm,
   CustomInput,
@@ -23,5 +28,6 @@ export {
   ServiceCard,
   StackList,
   Title,
+  VacancyList,
   WorkForm,
 }

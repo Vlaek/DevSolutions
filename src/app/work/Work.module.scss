@@ -2,43 +2,85 @@
 @import '@/shared/styles/mixins';
 
 .work {
-  width: 100%;
-  color: $main-white;
-  padding: 50px;
-}
+  &__desc {
+    display: flex;
+    align-items: flex-start;
+    column-gap: clamp(80px, 4.1666666667vw + 20px, 100px);
 
-.form {
-  display: flex;
-  flex-direction: column;
-  row-gap: 25px;
-  width: 700px;
-  margin: 0 auto;
+    &__text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 48px;
+      font-size: 30px;
 
-  &__header {
-    &__title {
-      font-size: 38px;
-      font-weight: bold;
-      margin-bottom: 20px;
-
-      &_orange {
+      span {
         color: $main-orange;
       }
     }
 
-    &__text {
-      font-size: 18px;
-      font-weight: bold;
+    &__img {
+      max-width: clamp(472px, 58.5416666667vw - 371px, 753px);
+      height: auto;
+      mix-blend-mode: lighten;
+      flex-shrink: 0;
     }
   }
+}
 
-  &__footer {
-    &__text {
-      color: $main-light-gray;
-      margin-bottom: 20px;
-    }
+.common {
+  display: flex;
+  flex-direction: column;
+  margin: 140px 0 140px;
 
-    &__button {
-      @include button-send;
+  &__title {
+    font-size: 60px;
+    font-weight: bold;
+    color: $main-white;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: $main-medium-gray;
+    max-width: 894px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin-top: 60px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 10px;
+      border: 1px solid $main-orange;
+      padding: clamp(16px, 6.25vw - 4px, 32px);
+      transition: all 0.3s ease;
+
+      &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        margin-bottom: 25px;
+      }
+
+      &__title {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        color: $main-orange;
+      }
+
+      &__text {
+        text-align: justify;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
     }
   }
 }

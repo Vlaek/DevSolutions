@@ -1,14 +1,14 @@
-import { ICard } from '@/shared/types/models'
 import { FC } from 'react'
-import styles from './ServicePage.module.scss'
+import { ICard } from '@/shared/types/models'
 import { helperString } from '@/shared/helpers'
 import { ContactsForm } from '@/shared/components'
+import styles from './Service.module.scss'
 
-interface ServicePageProps {
+interface IService {
   card: ICard
 }
 
-const ServicePage: FC<ServicePageProps> = (props) => {
+const Service: FC<IService> = (props) => {
   const { card } = props
   return (
     <div className={styles.card}>
@@ -39,4 +39,4 @@ const ServicePage: FC<ServicePageProps> = (props) => {
   )
 }
 
-export default ServicePage
+export default Service

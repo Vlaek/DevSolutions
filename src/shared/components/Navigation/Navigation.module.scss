@@ -16,7 +16,7 @@
         color: $main-white;
       }
 
-      &_orange {
+      &:last-child {
         color: $main-orange;
 
         &:hover {
