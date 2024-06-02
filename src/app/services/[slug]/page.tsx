@@ -4,6 +4,7 @@ import NotFound from '@/app/not-found'
 import { Metadata } from 'next'
 import { helperString } from '@/shared/helpers'
 import Service from './Service'
+import { meta } from '@/shared/meta'
 
 interface IServicePageParams {
   params: {
@@ -12,9 +13,8 @@ interface IServicePageParams {
 }
 
 export const metadata: Metadata = {
-  authors: [{ name: 'Vladislav Eichwald', url: 'https://github.com/Vlaek' }],
-  description: 'Services Page',
-  icons: './next.svg',
+  authors: meta.default.authors,
+  icons: meta.default.icons,
 }
 
 const ServicePage: FC<IServicePageParams> = ({ params }) => {
@@ -28,7 +28,8 @@ const ServicePage: FC<IServicePageParams> = ({ params }) => {
 
   const card = service?.card
 
-  metadata.title = helperString.capitalizeFirstLetterOfEachWord(card.title || 'Service')
+  const metaTitle = helperString.capitalizeFirstLetterOfEachWord(card.title || 'Service')
+  metadata.title = meta.getTitle(metaTitle)
   metadata.description = card.description || 'Service Page'
 
   return <Service card={card} />

@@ -1,11 +1,12 @@
 import { Metadata } from 'next'
 import Projects from './Projects'
+import { meta } from '@/shared/meta'
 
 export const metadata: Metadata = {
-  title: 'Projects',
-  authors: [{ name: 'Vladislav Eichwald', url: 'https://github.com/Vlaek' }],
-  description: 'Projects Page',
-  icons: './next.svg',
+  title: meta.getTitle('Проекты'),
+  authors: meta.default.authors,
+  description: meta.getDescription('Страница проектов, которые мы выполнили'),
+  icons: meta.default.icons,
 }
 
 export default async function Page() {

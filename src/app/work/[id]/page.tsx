@@ -4,6 +4,7 @@ import NotFound from '@/app/not-found'
 import { Metadata } from 'next'
 import { helperString } from '@/shared/helpers'
 import VacancyPage from './VacancyPage'
+import { meta } from '@/shared/meta'
 
 interface IWorkPageParams {
   params: {
@@ -27,8 +28,9 @@ const WorkPage: FC<IWorkPageParams> = ({ params }) => {
     return <NotFound />
   }
 
-  metadata.title = helperString.capitalizeFirstLetterOfEachWord(vacancy.title || 'Vacancy')
-  metadata.description = vacancy.desc || 'Service Page'
+  const metaTitle = helperString.capitalizeFirstLetterOfEachWord(vacancy.title || 'Vacancy')
+  metadata.title = meta.getTitle(metaTitle)
+  metadata.description = vacancy.desc || 'Vacancy Page'
 
   return <VacancyPage item={vacancy} />
 }
