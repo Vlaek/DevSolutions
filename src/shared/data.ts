@@ -1,5 +1,10 @@
 import { IAboutUsCard, IService, IVacancy } from '@/shared/types/models'
 
+export const test: { [key: string]: string[] } = {
+  en: ['hello', 'world'],
+  ru: ['привет', 'мир'],
+}
+
 export const serviceList: IService[] = [
   {
     card: {

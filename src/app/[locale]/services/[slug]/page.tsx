@@ -1,10 +1,11 @@
 import { FC } from 'react'
-import { serviceList } from '../../../shared/data'
 import NotFound from '@/app/not-found'
 import { Metadata } from 'next'
 import { helperString } from '@/shared/helpers'
 import Service from './Service'
 import { meta } from '@/shared/meta'
+import { IService } from '@/shared/types/models'
+import { serviceList } from '@/shared/data'
 
 interface IServicePageParams {
   params: {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 const ServicePage: FC<IServicePageParams> = ({ params }) => {
   const service = (() => {
-    return serviceList.find((item) => item.card.url === params.slug) || null
+    return serviceList.find((item: IService) => item.card.url === params.slug) || null
   })()
 
   if (service === null) {
