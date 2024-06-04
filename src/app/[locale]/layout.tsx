@@ -27,7 +27,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={fontStyle.className}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Layout header={<Header />} main={children} footer={<Footer />} />
         </NextIntlClientProvider>
       </body>

@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import styles from './AboutUsCard.module.scss'
 import { IAboutUsCard } from '@/shared/types/models'
 import Image from 'next/image'
+import styles from './AboutUsCard.module.scss'
 
 interface IAboutUsCardProps {
   item: IAboutUsCard

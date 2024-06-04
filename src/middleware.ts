@@ -1,14 +1,40 @@
 import createMiddleware from 'next-intl/middleware'
+import { localePrefix, locales } from './navigation'
 
 export default createMiddleware({
-  locales: ['en', 'ru'],
-
+  locales,
+  localePrefix,
   defaultLocale: 'ru',
 })
 
+// only applies this middleware to files in the app directory
 export const config = {
-  matcher: ['/', '/(ru|en)/:path*'],
+  matcher: ['/((?!api|_next|.*\\..*).*)'],
 }
+
+// import createMiddleware from 'next-intl/middleware'
+
+// export default createMiddleware({
+//   locales: ['ru', 'en'],
+
+//   defaultLocale: 'ru',
+
+//   pathnames: {
+//     '/': {
+//       ru: '/',
+//       en: 'en/',
+//     },
+
+//     '/services': {
+//       ru: '/services',
+//       en: '/services',
+//     },
+//   },
+// })
+
+// export const config = {
+//   matcher: ['/', '/([\\w-]+)?/services/ '],
+// }
 
 // import { NextRequest, NextResponse } from 'next/server'
 

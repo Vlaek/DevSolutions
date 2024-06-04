@@ -2,8 +2,8 @@
 
 import { FC, useRef } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
-import styles from './AccordionItem.module.scss'
 import classNames from 'classnames'
+import styles from './AccordionItem.module.scss'
 
 interface IAccordionItem {
   item: {
