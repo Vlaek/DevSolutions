@@ -12,7 +12,7 @@ export const serviceList: IService[] = [
       subtitle: 'Из ваших требований выделяем только самый основной функционал для оценки гипотез',
       description:
         'Такой подход помогает нашим клиентам на более ранней стадии посмотреть на свой продукт с разных сторон, получить обратную связь от своих потенциальных клиентов, оценить конкурентную среду и более точно сформировать функциональные требования для будущего развития продукта.',
-      videoUrl: './videos/MVP.mp4',
+      videoUrl: '/videos/MVP.mp4',
     },
     isOrange: true,
   },
@@ -22,7 +22,7 @@ export const serviceList: IService[] = [
       subtitle: '',
       description:
         'Учитывая ваши требования, разрабатываем нативные и кроссплатформенные приложения с уникальным дизайном и функционалом, полностью соответствующими вашим требованиям.',
-      videoUrl: './videos/mobile.mp4',
+      videoUrl: '/videos/mobile.mp4',
       full_stack: [
         'React Native',
         'Fabric',
@@ -65,7 +65,7 @@ export const serviceList: IService[] = [
       subtitle: '',
       description:
         'Реализуем широкий функционал для сайта вашей организации с комплексным решением. Опираясь на мировые тренды и собственный опыт, создаем удобные и функциональные интерфейсы.',
-      videoUrl: './videos/web.mp4',
+      videoUrl: '/videos/web.mp4',
       full_stack: [
         'JavaScript',
         'Java',
@@ -116,7 +116,7 @@ export const serviceList: IService[] = [
       subtitle: '',
       description:
         'Разработка программного обеспечения для встраиваемых систем различного функционала, от реализации отдельных функций до полной автоматизации вашего бизнеса. Переход к реализации услуг в современном формате.',
-      videoUrl: './videos/hardware.mp4',
+      videoUrl: '/videos/hardware.mp4',
       full_stack: ['C++'],
       url: 'hardware',
     },
@@ -127,7 +127,7 @@ export const serviceList: IService[] = [
       subtitle: '',
       description:
         'Мы предлагаем выделенную команду или отдельных специалистов по следующим направлениям:',
-      videoUrl: './videos/outstaff.mp4',
+      videoUrl: '/videos/outstaff.mp4',
       stack: ['Analytics', 'Design', 'Mobile', 'Web', 'Testing'],
     },
   },
