@@ -1,31 +1,29 @@
 'use client'
 
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import styles from './Header.module.scss'
 import classNames from 'classnames'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Navigation } from '../Navigation/Navigation'
 import { usePathname, useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
-import { useAppSelector, useAppDispatch } from '@/lib/hooks'
-import { changeLocale } from '@/lib/features/header/localeSlice'
+import { Navigation } from '@/shared/components'
 
 const Header: FC = () => {
-  const currentLocale: string = useAppSelector((state) => state.local.locale)
-  const dispatch = useAppDispatch()
+  const locale = useLocale()
+  const [currentLocale, setCurrentLocale] = useState<string>(locale)
 
   const router = useRouter()
   const pathname = usePathname()
-  const locale = useLocale()
+  
   console.log(currentLocale)
 
   const handleButton = () => {
     if (locale === 'en') {
-      dispatch(changeLocale('ru'))
+      setCurrentLocale('ru')
       router.replace(pathname.replace('/en', '/ru'))
     } else {
-      dispatch(changeLocale('en'))
+      setCurrentLocale('en')
       router.replace(`/en/${pathname}`)
     }
   }
