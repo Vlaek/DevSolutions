@@ -4,11 +4,14 @@ import { FC } from 'react'
 import { AboutUsCardList, Title, VacancyList, WorkForm } from '@/shared/components'
 import styles from './Work.module.scss'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 const Work: FC = () => {
+  const t = useTranslations('WorkPage')
+
   return (
     <div className={styles.work}>
-      <Title title='Работа у нас' subtitle='Присоединяйтесь к нам' />
+      <Title title={t('title')} subtitle={t('subtitle')} />
       <section className={styles.work__desc}>
         <div className={styles.work__desc__text}>
           <p>

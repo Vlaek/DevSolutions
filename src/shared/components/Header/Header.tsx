@@ -15,8 +15,6 @@ const Header: FC = () => {
 
   const router = useRouter()
   const pathname = usePathname()
-  
-  console.log(currentLocale)
 
   const handleButton = () => {
     if (locale === 'en') {
@@ -31,7 +29,7 @@ const Header: FC = () => {
   return (
     <div className={styles.header}>
       <div className={classNames(styles.header__block, styles.header__block_left)}>
-        <Link className='' href='/'>
+        <Link href='/'>
           <Image src='/next.svg' alt='test' width={1} height={1} className={styles.header__icon} />
         </Link>
       </div>

@@ -4,6 +4,7 @@ import { FC, useState } from 'react'
 import styles from './WorkForm.module.scss'
 import { CustomInput } from '../CustomInput/CustomInput'
 import { CustomTextarea } from '../CustomTextarea/CustomTextarea'
+import { useTranslations } from 'next-intl'
 
 const initialValue = {
   name: '',
@@ -15,6 +16,7 @@ const initialValue = {
 
 const WorkForm: FC = () => {
   const [state, setState] = useState(initialValue)
+  const t = useTranslations('WorkForm')
 
   const onDataByKeyChange = (value: string | number | boolean | null, key: string): void => {
     setState({ ...state, [key]: value })
@@ -25,15 +27,15 @@ const WorkForm: FC = () => {
       <div className={styles.form}>
         <div className={styles.form__header}>
           <h2 className={styles.form__header__title}>
-            Заинтересовала <span className={styles.form__header__title_orange}>работа</span> у нас?
+            {t('header.title.1')} <span className={styles.form__header__title_orange}>{t('header.title.2')}</span> {t('header.title.3')}
           </h2>
           <p className={styles.form__header__text}>
-            Оставьте свои контактные данные, и наш HR-менеджер свяжется с вами для уточнения деталей
+          {t('header.description')}
           </p>
         </div>
         <CustomInput
           value={state.name}
-          placeholder='Представьтесь, пожалуйста'
+          placeholder={t('placeholder.name')}
           keyValue='name'
           onDataByKeyChange={onDataByKeyChange}
         />
@@ -45,29 +47,28 @@ const WorkForm: FC = () => {
         />
         <CustomInput
           value={state.tgNick}
-          placeholder='Ник в Telegram'
+          placeholder={t('placeholder.nick')}
           keyValue='tgNick'
           onDataByKeyChange={onDataByKeyChange}
         />
         <CustomInput
           value={state.jobPosition}
-          placeholder='Кем хочешь работать у нас?'
+          placeholder={t('placeholder.jobPosition')}
           keyValue='jobPosition'
           onDataByKeyChange={onDataByKeyChange}
         />
         <CustomTextarea
           value={state.about}
-          placeholder='Расскажи о себе'
+          placeholder={t('placeholder.about')}
           keyValue='about'
           type='text'
           onDataByKeyChange={onDataByKeyChange}
         />
         <div className={styles.form__footer}>
           <p className={styles.form__footer__text}>
-            Нажимая кнопку «Отправить», я соглашаюсь с политикой конфиденциальности и обработки
-            персональных данных
+          {t('footer')}
           </p>
-          <button className={styles.form__footer__button}>Отправить</button>
+          <button className={styles.form__footer__button}>{t('button')}</button>
         </div>
       </div>
     </div>

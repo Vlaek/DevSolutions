@@ -1,11 +1,12 @@
 import { Title } from '@/shared/components'
+import { useTranslations } from 'next-intl'
 import { FC } from 'react'
-import styles from './Projects.module.scss'
 
 const Projects: FC = () => {
+  const t = useTranslations('ProjectsPage')
   return (
     <div>
-      <Title title='Наши проекты' subtitle='Рады поделиться с вами результатами своей работы :)' />
+      <Title title={t('title')} subtitle={t('subtitle')} />
     </div>
   )
 }

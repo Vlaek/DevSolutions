@@ -3,16 +3,17 @@
 import { FC, useState } from 'react'
 import styles from './ContactsForm.module.scss'
 import { CustomInput, CustomTextarea } from '@/shared/components/index'
+import { useTranslations } from 'next-intl'
 
 const initialValue = {
   name: '',
-  age: null,
   email: '',
   about: '',
 }
 
 const ContactsForm: FC = () => {
   const [state, setState] = useState(initialValue)
+  const t = useTranslations('ContactsForm')
 
   const onDataByKeyChange = (value: string | number | boolean | null, key: string): void => {
     setState({ ...state, [key]: value })
@@ -23,16 +24,16 @@ const ContactsForm: FC = () => {
       <div className={styles.form}>
         <div className={styles.form__header}>
           <h2 className={styles.form__header__title}>
-            У вас есть <span className={styles.form__header__title_orange}>проект</span> {'или '}
-            <span className={styles.form__header__title_orange}>идея</span> для реализации?
+            {t('header.title.1')} <span className={styles.form__header__title_orange}>{t('header.title.2')}</span> {t('header.title.3')}
+            <span className={styles.form__header__title_orange}> {t('header.title.4')}</span> {t('header.title.5')}
           </h2>
           <p className={styles.form__header__text}>
-            Расскажите нам, заполните форму ниже и мы обсудим все детали
+          {t('header.description')}
           </p>
         </div>
         <CustomInput
           value={state.name}
-          placeholder='Представьтесь, пожалуйста'
+          placeholder={t('placeholder.name')}
           keyValue='name'
           onDataByKeyChange={onDataByKeyChange}
         />
@@ -44,17 +45,14 @@ const ContactsForm: FC = () => {
         />
         <CustomTextarea
           value={state.about}
-          placeholder='Кратко опишите свой проект'
+          placeholder={t('placeholder.about')}
           keyValue='about'
           type='text'
           onDataByKeyChange={onDataByKeyChange}
         />
         <div className={styles.form__footer}>
-          <p className={styles.form__footer__text}>
-            Нажимая кнопку «Отправить», я соглашаюсь с политикой конфиденциальности и обработки
-            персональных данных
-          </p>
-          <button className={styles.form__footer__button}>Отправить</button>
+          <p className={styles.form__footer__text}>{t('footer')}</p>
+          <button className={styles.form__footer__button}>{t('button')}</button>
         </div>
       </div>
     </div>
