@@ -7,6 +7,7 @@ export interface ICard {
   title: string
   subtitle: string
   description: string
+  category: string
   videoUrl: string
   url?: string
   full_stack?: string[]

@@ -2,51 +2,19 @@
 
 import { FC, useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { StackList, Title } from '@/shared/components'
+import { ContactsForm, Title } from '@/shared/components'
 import styles from './Projects.module.scss'
 import classNames from 'classnames'
 import { checkObjectIsArrayByKey } from '@/shared/helpers/helperObject'
-import { IProject, projectList } from '@/shared/data'
-import Image from 'next/image'
-
-interface ICategory {
-  title: string
-  count: number
-}
-
-const categories: ICategory[] = [
-  {
-    title: 'Web',
-    count: 7,
-  },
-  {
-    title: 'Analytics',
-    count: 8,
-  },
-  {
-    title: 'Design',
-    count: 6,
-  },
-  {
-    title: 'Hardware',
-    count: 1,
-  },
-  {
-    title: 'Mobile',
-    count: 7,
-  },
-  {
-    title: 'Testing',
-    count: 8,
-  },
-]
+import { ICategory, IProject, categories, projectList } from '@/shared/data'
+import ProjectsList from '@/shared/components/ProjectsList/ProjectsList'
 
 const Projects: FC = () => {
   const [selectedCategories, setSelectedCategories] = useState<ICategory[]>([])
   const [filteredProjects, setFilteredProjects] = useState<IProject[]>(projectList)
   const t = useTranslations('ProjectsPage')
 
-  const onClick = (category: ICategory) => {
+  const onClickCategory = (category: ICategory) => {
     if (checkObjectIsArrayByKey(selectedCategories, category, 'title')) {
       setSelectedCategories([...selectedCategories].filter((item) => item.title !== category.title))
     } else {
@@ -76,30 +44,16 @@ const Projects: FC = () => {
               ),
             })}
             key={item.title}
-            onClick={() => onClick(item)}
+            onClick={() => onClickCategory(item)}
           >
             <p className={styles.categories__item__text}>{item.title}</p>
             <p className={styles.categories__item__text}>({item.count})</p>
           </div>
         ))}
       </section>
-      <section className={styles.projects}>
-        {filteredProjects.map((project) => (
-          <div key={project.id} className={styles.projects__item}>
-            <Image src={project.img} width={200} height={200} alt='da' />
-            <div className={styles.projects__item__title}>{project.title}</div>
-            <div className={styles.projects__item__subtitle}>{project.subtitle}</div>
-            {/* <ul>
-              {project.stack.map((item) => (
-                <li key={item} className={styles.project__item__stack__item}>
-                  {item}
-                </li>
-              ))}
-            </ul> */}
-            <StackList stack={project.stack} />
-          </div>
-        ))}
-      </section>
+      <ProjectsList items={filteredProjects} />
+      <div className={styles.divider}></div>
+      <ContactsForm />
     </div>
   )
 }

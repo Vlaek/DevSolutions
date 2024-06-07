@@ -32,3 +32,10 @@
     }
   }
 }
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: $main-dark-gray;
+  margin: clamp(80px, 4.1666666667vw + 20px, 100px) auto 124px;
+}

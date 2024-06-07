@@ -1,15 +1,11 @@
 import { IAboutUsCard, IService, IVacancy } from '@/shared/types/models'
 
-export const test: { [key: string]: string[] } = {
-  en: ['hello', 'world'],
-  ru: ['привет', 'мир'],
-}
-
 export const serviceList: IService[] = [
   {
     card: {
       title: 'MVP от 2 месяцев',
       subtitle: 'Из ваших требований выделяем только самый основной функционал для оценки гипотез',
+      category: 'MVP',
       description:
         'Такой подход помогает нашим клиентам на более ранней стадии посмотреть на свой продукт с разных сторон, получить обратную связь от своих потенциальных клиентов, оценить конкурентную среду и более точно сформировать функциональные требования для будущего развития продукта.',
       videoUrl: '/videos/MVP.mp4',
@@ -20,6 +16,7 @@ export const serviceList: IService[] = [
     card: {
       title: 'МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ',
       subtitle: '',
+      category: 'Mobile',
       description:
         'Учитывая ваши требования, разрабатываем нативные и кроссплатформенные приложения с уникальным дизайном и функционалом, полностью соответствующими вашим требованиям.',
       videoUrl: '/videos/mobile.mp4',
@@ -63,6 +60,7 @@ export const serviceList: IService[] = [
     card: {
       title: 'ВЕБ ПРИЛОЖЕНИЯ И САЙТЫ',
       subtitle: '',
+      category: 'Web',
       description:
         'Реализуем широкий функционал для сайта вашей организации с комплексным решением. Опираясь на мировые тренды и собственный опыт, создаем удобные и функциональные интерфейсы.',
       videoUrl: '/videos/web.mp4',
@@ -114,6 +112,7 @@ export const serviceList: IService[] = [
     card: {
       title: 'ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ДЛЯ ВСТРАИВАЕМЫХ СИСТЕМ',
       subtitle: '',
+      category: 'Hardware',
       description:
         'Разработка программного обеспечения для встраиваемых систем различного функционала, от реализации отдельных функций до полной автоматизации вашего бизнеса. Переход к реализации услуг в современном формате.',
       videoUrl: '/videos/hardware.mp4',
@@ -124,6 +123,7 @@ export const serviceList: IService[] = [
   {
     card: {
       title: 'OUTSTAFF',
+      category: 'Outstaff',
       subtitle: '',
       description:
         'Мы предлагаем выделенную команду или отдельных специалистов по следующим направлениям:',
@@ -138,6 +138,7 @@ export interface IProject {
   title: string
   subtitle: string
   description?: string
+  url: string
   img: string
   stack: string[]
 }
@@ -148,6 +149,7 @@ export const projectList: IProject[] = [
     title: 'Система обеспечения безопасности сотрудников на производстве «ДиэтархА»',
     subtitle: 'Реализация системы, автоматизирующая процессы контроля техники безопасности',
     img: '/img/projects/1.webp',
+    url: 'dietarkha',
     stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
   },
   {
@@ -155,6 +157,7 @@ export const projectList: IProject[] = [
     title: 'Судейская система для проведения соревнований «Aerobiq»',
     subtitle: 'Реализация системы, автоматизирующая процесс организации спортивных соревнований',
     img: '/img/projects/2.webp',
+    url: 'aerobiq',
     stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
   },
   {
@@ -162,6 +165,7 @@ export const projectList: IProject[] = [
     title: 'Определение и отслеживание пешеходов в видеоряде',
     subtitle: 'Определение и отслеживание пешеходов в видеоряде с последующим определением их...',
     img: '/img/projects/3.webp',
+    url: 'ped-neuron',
     stack: ['Web'],
   },
   {
@@ -169,6 +173,7 @@ export const projectList: IProject[] = [
     title: 'Сервис для поиска и бронирования отелей по России',
     subtitle: 'Сервис позволяет гостям подбирать и бронировать жилье по городам России',
     img: '/img/projects/4.webp',
+    url: 'innbi',
     stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
   },
   {
@@ -177,6 +182,7 @@ export const projectList: IProject[] = [
     subtitle:
       'Визуализирует данные из областей информационных технологий, машиностроения, робототехники и других сфер',
     img: '/img/projects/5.webp',
+    url: 'techradar',
     stack: ['Web', 'Analytics', 'Testing'],
   },
   {
@@ -185,6 +191,7 @@ export const projectList: IProject[] = [
     subtitle:
       'Разработка комплекса автоматизированных решений для продажи SIM-карт через терминалы',
     img: '/img/projects/6.webp',
+    url: 'simpad',
     stack: ['Web', 'Analytics', 'Design', 'Hardware', 'Mobile', 'Testing'],
   },
   {
@@ -192,6 +199,7 @@ export const projectList: IProject[] = [
     title: 'Комплекс мобильных приложений для фитнеса',
     subtitle: 'Приложения направлены на взаимодействие тренера и клиента',
     img: '/img/projects/7.webp',
+    url: 'fitness',
     stack: ['Analytics', 'Mobile', 'Testing'],
   },
   {
@@ -199,6 +207,7 @@ export const projectList: IProject[] = [
     title: 'Информационные сайты спортивных организаций',
     subtitle: 'Реализация сайтов в соответствии с требованиями Федеральных законов',
     img: '/img/projects/8.webp',
+    url: 'sports',
     stack: ['Web', 'Analytics', 'Mobile', 'Testing'],
   },
   {
@@ -207,6 +216,7 @@ export const projectList: IProject[] = [
     subtitle:
       'Мобильное приложение с тематическими маршрутами, для прогулок туристов в различных...',
     img: '/img/projects/9.webp',
+    url: 'ouiguide',
     stack: ['Analytics', 'Design', 'Mobile', 'Testing'],
   },
   {
@@ -215,6 +225,7 @@ export const projectList: IProject[] = [
     subtitle:
       'Реализация системы, позволяющая осуществлять внутренние и внешние платежные операции с фиатными валютами',
     img: '/img/projects/10.webp',
+    url: 'bizonex',
     stack: ['Mobile'],
   },
 ]
@@ -380,5 +391,37 @@ export const vacancies: IVacancy[] = [
       'Опыт работы с Docker',
       'Технический английский',
     ],
+  },
+]
+
+export interface ICategory {
+  title: string
+  count: number
+}
+
+export const categories: ICategory[] = [
+  {
+    title: 'Web',
+    count: 7,
+  },
+  {
+    title: 'Analytics',
+    count: 8,
+  },
+  {
+    title: 'Design',
+    count: 6,
+  },
+  {
+    title: 'Hardware',
+    count: 1,
+  },
+  {
+    title: 'Mobile',
+    count: 7,
+  },
+  {
+    title: 'Testing',
+    count: 8,
   },
 ]

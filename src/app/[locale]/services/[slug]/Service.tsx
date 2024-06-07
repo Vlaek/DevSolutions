@@ -1,8 +1,12 @@
-import { FC } from 'react'
+'use client'
+
+import { FC, useEffect, useState } from 'react'
 import { ICard } from '@/shared/types/models'
 import { helperString } from '@/shared/helpers'
 import { ContactsForm } from '@/shared/components'
 import styles from './Service.module.scss'
+import ProjectsList from '@/shared/components/ProjectsList/ProjectsList'
+import { IProject, projectList } from '@/shared/data'
 
 interface IService {
   card: ICard
@@ -10,6 +14,15 @@ interface IService {
 
 const Service: FC<IService> = (props) => {
   const { card } = props
+  const [filteredProjects, setFilteredProjects] = useState<IProject[]>(projectList)
+
+  useEffect(() => {
+    const filtered = projectList.filter((project) => {
+      return project.stack.includes(card.category)
+    })
+    setFilteredProjects(filtered)
+  }, [card.category])
+
   return (
     <div className={styles.card}>
       <div className={styles.card__header}>
@@ -30,7 +43,9 @@ const Service: FC<IService> = (props) => {
       </section>
       <section className={styles.card__projects}>
         <p className={styles.card__projects__title}>Наш опыт</p>
-        <div className={styles.card__projects__container}>da</div>
+        <div className={styles.card__projects__container}>
+          <ProjectsList items={filteredProjects} />
+        </div>
       </section>
       <section className={styles.card__contacts}>
         <ContactsForm />
