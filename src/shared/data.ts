@@ -133,16 +133,90 @@ export const serviceList: IService[] = [
   },
 ]
 
-interface IProject {
+export interface IProject {
+  id: number
   title: string
   subtitle: string
-  description: string
-  category: string[]
+  description?: string
+  img: string
   stack: string[]
 }
 
-export const projectList = [
-  // title: string;
+export const projectList: IProject[] = [
+  {
+    id: 0,
+    title: 'Система обеспечения безопасности сотрудников на производстве «ДиэтархА»',
+    subtitle: 'Реализация системы, автоматизирующая процессы контроля техники безопасности',
+    img: '/img/projects/1.webp',
+    stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
+  },
+  {
+    id: 1,
+    title: 'Судейская система для проведения соревнований «Aerobiq»',
+    subtitle: 'Реализация системы, автоматизирующая процесс организации спортивных соревнований',
+    img: '/img/projects/2.webp',
+    stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
+  },
+  {
+    id: 2,
+    title: 'Определение и отслеживание пешеходов в видеоряде',
+    subtitle: 'Определение и отслеживание пешеходов в видеоряде с последующим определением их...',
+    img: '/img/projects/3.webp',
+    stack: ['Web'],
+  },
+  {
+    id: 3,
+    title: 'Сервис для поиска и бронирования отелей по России',
+    subtitle: 'Сервис позволяет гостям подбирать и бронировать жилье по городам России',
+    img: '/img/projects/4.webp',
+    stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
+  },
+  {
+    id: 4,
+    title: 'Веб-система по отображению новостей и событий',
+    subtitle:
+      'Визуализирует данные из областей информационных технологий, машиностроения, робототехники и других сфер',
+    img: '/img/projects/5.webp',
+    stack: ['Web', 'Analytics', 'Testing'],
+  },
+  {
+    id: 5,
+    title: 'Информационная система для терминалов',
+    subtitle:
+      'Разработка комплекса автоматизированных решений для продажи SIM-карт через терминалы',
+    img: '/img/projects/6.webp',
+    stack: ['Web', 'Analytics', 'Design', 'Hardware', 'Mobile', 'Testing'],
+  },
+  {
+    id: 6,
+    title: 'Комплекс мобильных приложений для фитнеса',
+    subtitle: 'Приложения направлены на взаимодействие тренера и клиента',
+    img: '/img/projects/7.webp',
+    stack: ['Analytics', 'Mobile', 'Testing'],
+  },
+  {
+    id: 7,
+    title: 'Информационные сайты спортивных организаций',
+    subtitle: 'Реализация сайтов в соответствии с требованиями Федеральных законов',
+    img: '/img/projects/8.webp',
+    stack: ['Web', 'Analytics', 'Mobile', 'Testing'],
+  },
+  {
+    id: 8,
+    title: 'Приложение для путешествий по необычным местам Парижа',
+    subtitle:
+      'Мобильное приложение с тематическими маршрутами, для прогулок туристов в различных...',
+    img: '/img/projects/9.webp',
+    stack: ['Analytics', 'Design', 'Mobile', 'Testing'],
+  },
+  {
+    id: 9,
+    title: 'Мобильное приложение по операциям с криптовалютой',
+    subtitle:
+      'Реализация системы, позволяющая осуществлять внутренние и внешние платежные операции с фиатными валютами',
+    img: '/img/projects/10.webp',
+    stack: ['Mobile'],
+  },
 ]
 
 export const aboutUsCards: IAboutUsCard[] = [
