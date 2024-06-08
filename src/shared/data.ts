@@ -139,6 +139,7 @@ export interface IProject {
   subtitle: string
   description?: string
   url: string
+  technologies: string[]
   img: string
   stack: string[]
 }
@@ -150,6 +151,7 @@ export const projectList: IProject[] = [
     subtitle: 'Реализация системы, автоматизирующая процессы контроля техники безопасности',
     img: '/img/projects/1.webp',
     url: 'dietarkha',
+    technologies: ['Python', 'Fastapi', 'TypeScript', 'React', 'Flutter', 'Dart'],
     stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
   },
   {
@@ -158,6 +160,7 @@ export const projectList: IProject[] = [
     subtitle: 'Реализация системы, автоматизирующая процесс организации спортивных соревнований',
     img: '/img/projects/2.webp',
     url: 'aerobiq',
+    technologies: ['Python', 'Postgresql', 'React', 'Next.js'],
     stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
   },
   {
@@ -166,6 +169,25 @@ export const projectList: IProject[] = [
     subtitle: 'Определение и отслеживание пешеходов в видеоряде с последующим определением их...',
     img: '/img/projects/3.webp',
     url: 'ped-neuron',
+    technologies: [
+      'Python',
+      'Celery',
+      'Postgresql',
+      'Pytorch',
+      'Opencv',
+      'Pycuda',
+      'TensorRT',
+      'Sqlalchemy',
+      'Grpc',
+      'Fastapi',
+      'Zeromq',
+      'Redis',
+      'Docker',
+      'Ffmpeg',
+      'Webrtc (Janus)',
+      'Websockets',
+      'Firebase',
+    ],
     stack: ['Web'],
   },
   {
@@ -174,6 +196,17 @@ export const projectList: IProject[] = [
     subtitle: 'Сервис позволяет гостям подбирать и бронировать жилье по городам России',
     img: '/img/projects/4.webp',
     url: 'innbi',
+    technologies: [
+      'Java',
+      'Python',
+      'Celery',
+      'Sqlalchemy',
+      'Redis',
+      'TypeScript',
+      'React',
+      'Flutter',
+      'Kafka',
+    ],
     stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
   },
   {
@@ -183,6 +216,7 @@ export const projectList: IProject[] = [
       'Визуализирует данные из областей информационных технологий, машиностроения, робототехники и других сфер',
     img: '/img/projects/5.webp',
     url: 'techradar',
+    technologies: ['Python', 'Fastapi', 'TypeScript', 'React', 'Flutter', 'Dart'],
     stack: ['Web', 'Analytics', 'Testing'],
   },
   {
@@ -192,6 +226,7 @@ export const projectList: IProject[] = [
       'Разработка комплекса автоматизированных решений для продажи SIM-карт через терминалы',
     img: '/img/projects/6.webp',
     url: 'simpad',
+    technologies: ['Redux', 'Redis', 'Docker', 'React', 'PHP', 'Mysql', 'Laravel', 'Voyager'],
     stack: ['Web', 'Analytics', 'Design', 'Hardware', 'Mobile', 'Testing'],
   },
   {
@@ -200,6 +235,20 @@ export const projectList: IProject[] = [
     subtitle: 'Приложения направлены на взаимодействие тренера и клиента',
     img: '/img/projects/7.webp',
     url: 'fitness',
+    technologies: [
+      'Python',
+      'Postgresql',
+      'Docker',
+      'Firebase',
+      'Flutter',
+      'Dart',
+      'BLoC',
+      'Dio',
+      'Django',
+      'Docker-Compose',
+      'Hive',
+      'BLE',
+    ],
     stack: ['Analytics', 'Mobile', 'Testing'],
   },
   {
@@ -208,6 +257,7 @@ export const projectList: IProject[] = [
     subtitle: 'Реализация сайтов в соответствии с требованиями Федеральных законов',
     img: '/img/projects/8.webp',
     url: 'sports',
+    technologies: ['JavaScript', 'Redux', 'Python', 'Docker', 'React', 'Django', 'Docker-Compose'],
     stack: ['Web', 'Analytics', 'Mobile', 'Testing'],
   },
   {
@@ -217,6 +267,19 @@ export const projectList: IProject[] = [
       'Мобильное приложение с тематическими маршрутами, для прогулок туристов в различных...',
     img: '/img/projects/9.webp',
     url: 'ouiguide',
+    technologies: [
+      'Swift',
+      'CoreLocation',
+      'MapKit',
+      'CleanSwift(VIP)',
+      'OneSignal',
+      'AVFoundation',
+      'Moya',
+      'Sign in with Google',
+      'Sign in with Facebook',
+      'R.Swift',
+      'SwiftLint',
+    ],
     stack: ['Analytics', 'Design', 'Mobile', 'Testing'],
   },
   {
@@ -226,6 +289,7 @@ export const projectList: IProject[] = [
       'Реализация системы, позволяющая осуществлять внутренние и внешние платежные операции с фиатными валютами',
     img: '/img/projects/10.webp',
     url: 'bizonex',
+    technologies: ['Firebase', 'Flutter', 'Dart', 'BLoC', 'GraphQL'],
     stack: ['Mobile'],
   },
 ]

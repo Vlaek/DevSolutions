@@ -65,5 +65,16 @@
     },
     "footer": "By clicking the \"Submit\" button, I agree to the privacy policy and the processing of personal data",
     "button": "submit"
+  },
+  "ProjectForm": {
+    "header": {
+      "title": "Project documentation",
+      "description": "To receive the project documentation, you must fill out the request form. After verification, we will send a package of documents to the email you specified"
+    },
+    "placeholder": {
+      "name": "Introduce yourself, please",
+      "company": "Company"
+    },
+    "button": "Send a request"
   }
 }

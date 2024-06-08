@@ -1,0 +1,40 @@
+@import '@/shared/styles/variables';
+@import '@/shared/styles/mixins';
+
+.project {
+  width: 100%;
+  color: $main-white;
+  padding: 50px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  width: 700px;
+
+  &__header {
+    &__title {
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: $main-orange;
+    }
+
+    &__text {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  &__footer {
+    &__text {
+      color: $main-light-gray;
+      margin-bottom: 20px;
+    }
+
+    &__button {
+      @include button-send;
+    }
+  }
+}

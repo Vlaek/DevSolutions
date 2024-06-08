@@ -30,7 +30,7 @@ const ProjectPage: FC<IProjectPageParams> = ({ params }) => {
   metadata.title = meta.getTitle(metaTitle)
   metadata.description = project.description || 'Project Page'
 
-  return <Project />
+  return <Project item={project} />
 }
 
 export default ProjectPage
