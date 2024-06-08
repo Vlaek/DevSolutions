@@ -1,9 +1,5 @@
 @import '@/shared/styles/variables';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
   margin: 0;
   padding: 0;
@@ -23,9 +19,20 @@
   outline: none;
 }
 
+ul {
+  list-style: none;
+}
+
 a:focus,
 a:active {
   outline: none;
+  color: inherit;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 input::-ms-clear {
@@ -34,14 +41,31 @@ input::-ms-clear {
 
 body,
 html {
-  background-color: $main-black;
-  color: $main-white;
-  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 300;
   height: 100%;
+  transition: background-color 0.3s ease;
 }
 
 body {
   min-height: 100%;
+}
+
+button {
+  background-color: inherit;
+  color: inherit;
+}
+
+html[data-theme='Dark'] {
+  background-color: $main-black;
+  color: $main-white;
+  --color: #ffffff;
+  --color-hover: #000;
+}
+
+html[data-theme='Light'] {
+  background-color: $main-white;
+  color: $main-black;
+  --color: #000;
+  --color-hover: #ffffff;
 }

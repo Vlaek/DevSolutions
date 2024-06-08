@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
 import { Navigation } from '@/shared/components'
+import { useTheme } from '@/shared/hooks/useTheme'
 
 const Header: FC = () => {
   const locale = useLocale()
@@ -26,6 +27,12 @@ const Header: FC = () => {
     }
   }
 
+  const { theme, setTheme } = useTheme()
+
+  const handleThemaButton = () => {
+    setTheme(theme === 'Light' ? 'Dark' : 'Light')
+  }
+
   return (
     <div className={styles.header}>
       <div className={classNames(styles.header__block, styles.header__block_left)}>
@@ -37,6 +44,9 @@ const Header: FC = () => {
         <Navigation />
         <button className={classNames(styles.header__button)} onClick={() => handleButton()}>
           {currentLocale.toUpperCase()}
+        </button>
+        <button className={classNames(styles.header__button)} onClick={() => handleThemaButton()}>
+          {theme}
         </button>
       </div>
     </div>

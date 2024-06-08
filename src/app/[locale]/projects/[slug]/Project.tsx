@@ -3,10 +3,8 @@
 import { FC, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { IProject, projectList } from '@/shared/data'
-import { StackList } from '@/shared/components'
+import { ProjectForm, ProjectsList, StackList } from '@/shared/components'
 import styles from './Project.module.scss'
-import ProjectsList from '@/shared/components/ProjectsList/ProjectsList'
-import { ProjectForm } from '@/shared/components/ProjectForm/ProjectForm'
 
 interface IProjectProps {
   item: IProject

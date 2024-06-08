@@ -36,6 +36,8 @@
     padding: 15px 25px;
     border-radius: 40px;
     cursor: pointer;
+    background-color: inherit;
+    color: inherit;
 
     &:hover {
       border-color: $main-orange;

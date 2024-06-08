@@ -10,12 +10,10 @@
   &__title {
     font-size: 28px;
     font-weight: bold;
-    color: $main-white;
   }
 
   &__subtitle {
     font-size: 20px;
-    color: $main-white;
   }
 
   &__list {
@@ -33,7 +31,7 @@
         height: 6px;
         background-color: $main-orange;
         border-radius: 3px;
-        content: "";
+        content: '';
         display: inline-block;
         margin-right: 8px;
         align-self: center;

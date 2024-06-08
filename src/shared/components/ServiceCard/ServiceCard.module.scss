@@ -5,6 +5,7 @@
   height: 400px;
   outline: 1px solid $main-medium-gray;
   border-radius: 10px;
+  transition: all 0.3s ease;
 
   display: flex;
   justify-content: space-between;
@@ -25,6 +26,7 @@
 
     &:hover {
       background-color: $main-dark-gray;
+      color: var(--color-hover);
     }
   }
 
@@ -35,7 +37,6 @@
   }
 
   &__title {
-    color: $main-white;
     font-weight: bold;
     font-size: 32px;
   }
@@ -47,7 +48,8 @@
   &__video {
     width: 400px;
     height: 400px;
-    mix-blend-mode: lighten;
+    mix-blend-mode: difference;
+    border-radius: 10px;
   }
 
   &__footer {
@@ -68,6 +70,8 @@
     border-radius: 10px;
     padding: 10px 25px;
     transition: all 0.3s ease;
+    color: #fff;
+    cursor: pointer;
 
     &:hover {
       background-color: $main-medium-gray;

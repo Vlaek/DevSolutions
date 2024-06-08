@@ -7,7 +7,6 @@
   &__title {
     font-size: 60px;
     font-weight: bold;
-    color: $main-white;
 
     &__list {
       display: flex;
@@ -29,7 +28,7 @@
 
         &:not(:first-child):before {
           display: inline-block;
-          content: "";
+          content: '';
           width: 4px;
           height: 4px;
           background-color: $main-light-gray;
@@ -64,7 +63,6 @@
     &__title {
       font-size: 28px;
       font-weight: bold;
-      color: $main-white;
     }
 
     &__list {
@@ -82,7 +80,7 @@
           height: 6px;
           background-color: $main-orange;
           border-radius: 3px;
-          content: "";
+          content: '';
           display: inline-block;
           margin-right: 8px;
           align-self: center;

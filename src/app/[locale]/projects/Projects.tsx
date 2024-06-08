@@ -2,12 +2,11 @@
 
 import { FC, useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { ContactsForm, Title } from '@/shared/components'
+import { ContactsForm, ProjectsList, Title } from '@/shared/components'
 import styles from './Projects.module.scss'
 import classNames from 'classnames'
 import { checkObjectIsArrayByKey } from '@/shared/helpers/helperObject'
 import { ICategory, IProject, categories, projectList } from '@/shared/data'
-import ProjectsList from '@/shared/components/ProjectsList/ProjectsList'
 
 const Projects: FC = () => {
   const [selectedCategories, setSelectedCategories] = useState<ICategory[]>([])

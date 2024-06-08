@@ -13,7 +13,7 @@
       cursor: pointer;
 
       &:hover {
-        color: $main-white;
+        color: var(--color);
       }
 
       &:last-child {

@@ -8,6 +8,8 @@ import { Footer } from './Footer/Footer'
 import { Header } from './Header/Header'
 import { Layout } from './Layout/Layout'
 import { Navigation } from './Navigation/Navigation'
+import { ProjectForm } from './ProjectForm/ProjectForm'
+import { ProjectsList } from './ProjectsList/ProjectsList'
 import { ServiceCard } from './ServiceCard/ServiceCard'
 import { StackList } from './StackList/StackList'
 import { Title } from './Title/Title'
@@ -26,6 +28,8 @@ export {
   Header,
   Layout,
   Navigation,
+  ProjectForm,
+  ProjectsList,
   ServiceCard,
   StackList,
   Title,

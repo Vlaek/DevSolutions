@@ -5,11 +5,12 @@
   flex-direction: column;
   border-radius: 10px;
   border: 1px solid $main-medium-gray;
-  position: relative;
   padding-bottom: 10px;
+  position: relative;
+  color: var(--color);
 
   &:hover {
-    border-color: $main-white;
+    border-color: var(--color);
   }
 
   &:focus-within {
@@ -17,7 +18,7 @@
 
     .label {
       font-size: 12px;
-      transform: translateY(-90%);
+      transform: translateY(-30%);
     }
   }
 }
@@ -30,10 +31,11 @@
   color: $main-medium-gray;
   transition: transform 0.3s ease, font-size 0.3s ease;
   user-select: none;
+  cursor: text;
 
   &_active {
     font-size: 12px;
-    transform: translateY(-90%);
+    transform: translateY(-30%);
   }
 }
 
@@ -43,9 +45,9 @@
   margin: 0;
   border: none;
   background-color: transparent;
-  color: $main-white;
   font-weight: 400;
   font-size: 16px;
   outline: none;
   resize: none;
+  color: var(--color);
 }

@@ -3,9 +3,8 @@
 import { FC, useEffect, useState } from 'react'
 import { ICard } from '@/shared/types/models'
 import { helperString } from '@/shared/helpers'
-import { ContactsForm } from '@/shared/components'
+import { ContactsForm, ProjectsList } from '@/shared/components'
 import styles from './Service.module.scss'
-import ProjectsList from '@/shared/components/ProjectsList/ProjectsList'
 import { IProject, projectList } from '@/shared/data'
 
 interface IService {

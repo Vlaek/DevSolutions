@@ -1,3 +1,5 @@
+'use client'
+
 import { FC } from 'react'
 import styles from './ProjectsList.module.scss'
 import { IProject } from '@/shared/data'
@@ -47,4 +49,4 @@ const ProjectsList: FC<IProjectsListProps> = (props) => {
   )
 }
 
-export default ProjectsList
+export { ProjectsList }
