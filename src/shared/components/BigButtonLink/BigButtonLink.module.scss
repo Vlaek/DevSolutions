@@ -1,0 +1,33 @@
+@import '@/shared/styles/variables';
+
+.button {
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid $main-medium-gray;
+  border-radius: 10px;
+  padding: 40px;
+  background: transparent;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 0;
+    background-color: $main-orange;
+    transition: height 0.6s ease;
+  }
+
+  &:hover::before {
+    height: 100%;
+  }
+}

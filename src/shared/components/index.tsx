@@ -1,6 +1,7 @@
 import { AboutUsCard } from './AboutUsCard/AboutUsCard'
 import { AboutUsCardList } from './AboutUsCardList/AboutUsCardList'
 import { Accordion } from './Accordion/Accordion'
+import { BigButtonLink } from './BigButtonLink/BigButtonLink'
 import { ContactsForm } from './ContactsForm/ContactsForm'
 import { CustomInput } from './CustomInput/CustomInput'
 import { CustomTextarea } from './CustomTextarea/CustomTextarea'
@@ -21,6 +22,7 @@ export {
   AboutUsCard,
   AboutUsCardList,
   Accordion,
+  BigButtonLink,
   ContactsForm,
   CustomInput,
   CustomTextarea,

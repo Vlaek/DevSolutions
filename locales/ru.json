@@ -1,6 +1,12 @@
 {
   "MainPage": {
-    "title": "Привет мир!"
+    "title": "Создаем цифровые продукты",
+    "subtitle": "Проектируем и разрабатываем системы для среднего и крупного бизнеса",
+    "hashtag": {
+      "1": "#Mobile_app",
+      "2": "#Web_system",
+      "3": "#embedded_System"
+    }
   },
   "ServicesPage": {
     "title": "Наши услуги",
