@@ -1,12 +1,11 @@
+'use client'
+
 import { useLayoutEffect, useState } from 'react'
 
-const isDarkThema = window?.matchMedia('(prefers-color-scheme: dark)').matches
-const defaultTheme = isDarkThema ? 'Dark' : 'Light'
+const defaultTheme = 'Dark'
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState<string>(localStorage.getItem('theme') || defaultTheme)
-
-  localStorage.setItem('theme', theme)
+  const [theme, setTheme] = useState<string>(defaultTheme)
 
   useLayoutEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)

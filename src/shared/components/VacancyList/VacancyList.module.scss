@@ -35,11 +35,9 @@
 
     &__item {
       padding: 24px;
-      background-image: radial-gradient(
-        98.88% 98.88% at 100% 0,
-        rgba(242, 222, 45, 0.1) 0,
-        transparent 100%
-      );
+      background-image: radial-gradient(98.88% 98.88% at 100% 0,
+          rgba(242, 222, 45, 0.1) 0,
+          transparent 100%);
       border-radius: 10px;
       border: 1px solid $main-gray;
       cursor: pointer;
@@ -48,6 +46,11 @@
       &:hover {
         border-color: $main-orange;
         background-color: $main-dark-gray;
+        color: #fff;
+
+        .jobs__cards__item__level {
+          color: #fff;
+        }
       }
 
       &__title {
@@ -64,6 +67,7 @@
       &__level {
         font-size: 18px;
         font-weight: bold;
+        color: $main-light-gray;
       }
     }
   }

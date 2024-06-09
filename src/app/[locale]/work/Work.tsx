@@ -33,8 +33,8 @@ const Work: FC = () => {
           src='/img/job.png'
           alt='img'
           className={styles.work__desc__img}
-          width={753}
-          height={819}
+          width={800}
+          height={800}
           draggable={false}
           aria-hidden={true}
         />

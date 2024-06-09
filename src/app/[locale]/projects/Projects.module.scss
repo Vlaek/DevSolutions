@@ -21,12 +21,12 @@
     transition: all 0.3s ease;
 
     &:hover {
-      color: $main-white;
+      color: var(--color);
       border-color: $main-orange;
     }
 
     &_active {
-      color: $main-white;
+      color: var(--color);
       background-color: $main-orange;
       border-color: $main-orange;
     }

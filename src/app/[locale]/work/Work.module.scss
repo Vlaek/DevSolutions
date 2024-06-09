@@ -21,7 +21,6 @@
     &__img {
       max-width: clamp(472px, 58.5416666667vw - 371px, 753px);
       height: auto;
-      mix-blend-mode: lighten;
       flex-shrink: 0;
     }
   }
