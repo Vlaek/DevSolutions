@@ -8,7 +8,9 @@ import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
 import { Navigation } from '@/shared/components'
-import { useTheme } from '@/shared/hooks/useTheme'
+import { useDispatch, useSelector } from 'react-redux'
+import { changeTheme } from '@/lib/features/header/themeSlice'
+import { RootState } from '@/lib/store'
 
 const Header: FC = () => {
   const locale = useLocale()
@@ -27,10 +29,11 @@ const Header: FC = () => {
     }
   }
 
-  const { theme, setTheme } = useTheme()
+  const theme = useSelector((state: RootState) => state.theme.value)
+  const dispatch = useDispatch()
 
   const handleThemaButton = () => {
-    setTheme(theme === 'Light' ? 'Dark' : 'Light')
+    dispatch(changeTheme(theme === 'Light' ? 'Dark' : 'Light'))
   }
 
   return (

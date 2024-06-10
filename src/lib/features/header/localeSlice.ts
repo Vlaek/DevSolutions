@@ -2,25 +2,25 @@ import { RootState } from '@/lib/store'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export interface ILocaleState {
-  locale: string
+  value: string
 }
 
 const initialState: ILocaleState = {
-  locale: 'ru',
+  value: 'ru',
 }
 
 export const localeSlice = createSlice({
   name: 'locale',
   initialState,
   reducers: {
-    changeLocale: (state: ILocaleState, action: PayloadAction<string>) => {
-      state.locale = action.payload
+    changeLocale: (state, action: PayloadAction<string>) => {
+      state.value = action.payload
     },
   },
 })
 
 export const { changeLocale } = localeSlice.actions
 
-export const selectLocale = (state: RootState) => state.local.locale
+export const selectLocale = (state: RootState) => state.local.value
 
 export default localeSlice.reducer
