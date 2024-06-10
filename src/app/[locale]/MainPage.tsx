@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import { FC } from 'react'
 import styles from './MainPage.module.scss'
 import classNames from 'classnames'
-import { projectList } from '@/shared/data'
+import { feedbackList, partnerList, projectList } from '@/shared/data'
 import { Link } from '@/navigation'
 import { BigButtonLink, ContactsForm, StackList } from '@/shared/components'
 import Image from 'next/image'
@@ -69,7 +69,7 @@ const MainPage: FC = () => {
       <section className={classNames(styles.container, styles.partners)}>
         <h2 className={styles.partners__title}>Наши партнеры</h2>
         <ul className={styles.partners__grid}>
-          {partners.map((partner) => (
+          {partnerList.map((partner) => (
             <li key={partner} className={styles.partners__grid__item}>
               <Image
                 src={`/img/partners/${partner}`}
@@ -103,53 +103,5 @@ const MainPage: FC = () => {
     </div>
   )
 }
-
-const partners = ['user1.png', 'user2.png', 'user3.png', 'user4.png', 'user5.png', 'user6.png']
-
-interface IFeedback {
-  company: string
-  comment: string
-  name: string
-  position: string
-}
-
-const feedbackList: IFeedback[] = [
-  {
-    company: 'BestCorp',
-    comment: 'Great service, very professional!',
-    name: 'John Doe',
-    position: 'CEO',
-  },
-  {
-    company: 'TopTech',
-    comment: 'Excellent experience, highly recommended!',
-    name: 'Jane Smith',
-    position: 'Senior Developer',
-  },
-  {
-    company: 'Global Solutions',
-    comment: 'Outstanding work, exceeded our expectations!',
-    name: 'Alex Johnson',
-    position: 'Project Manager',
-  },
-  {
-    company: 'InnovateX',
-    comment: 'Exceptional quality and attention to detail!',
-    name: 'Emily Brown',
-    position: 'Marketing Director',
-  },
-  {
-    company: 'FutureBuilders',
-    comment: 'Impressive results, a pleasure to work with!',
-    name: 'Michael Wilson',
-    position: 'Operations Manager',
-  },
-  {
-    company: 'EcoFriendly',
-    comment: 'Professional and reliable service, thank you!',
-    name: 'Sophia Lee',
-    position: 'Environmental Specialist',
-  },
-]
 
 export default MainPage

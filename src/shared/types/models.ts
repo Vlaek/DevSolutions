@@ -31,3 +31,26 @@ export interface IVacancy {
   expectations: string[]
   plus: string[]
 }
+
+export interface IFeedback {
+  company: string
+  comment: string
+  name: string
+  position: string
+}
+
+export interface ICategory {
+  title: string
+  count: number
+}
+
+export interface IProject {
+  id: number
+  title: string
+  subtitle: string
+  description?: string
+  url: string
+  technologies: string[]
+  img: string
+  stack: string[]
+}

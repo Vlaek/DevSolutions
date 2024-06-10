@@ -29,6 +29,12 @@
     }
   }
 
+  &__button_list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+  }
+
   &__button {
     border: 1px solid $main-medium-gray;
     width: 75px;

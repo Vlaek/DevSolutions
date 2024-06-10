@@ -1,4 +1,11 @@
-import { IAboutUsCard, IService, IVacancy } from '@/shared/types/models'
+import {
+  IAboutUsCard,
+  ICategory,
+  IFeedback,
+  IProject,
+  IService,
+  IVacancy,
+} from '@/shared/types/models'
 
 export const serviceList: IService[] = [
   {
@@ -132,17 +139,6 @@ export const serviceList: IService[] = [
     },
   },
 ]
-
-export interface IProject {
-  id: number
-  title: string
-  subtitle: string
-  description?: string
-  url: string
-  technologies: string[]
-  img: string
-  stack: string[]
-}
 
 export const projectList: IProject[] = [
   {
@@ -458,11 +454,6 @@ export const vacancies: IVacancy[] = [
   },
 ]
 
-export interface ICategory {
-  title: string
-  count: number
-}
-
 export const categories: ICategory[] = [
   {
     title: 'Web',
@@ -487,5 +478,53 @@ export const categories: ICategory[] = [
   {
     title: 'Testing',
     count: 8,
+  },
+]
+
+export const partnerList = [
+  'user1.png',
+  'user2.png',
+  'user3.png',
+  'user4.png',
+  'user5.png',
+  'user6.png',
+]
+
+export const feedbackList: IFeedback[] = [
+  {
+    company: 'BestCorp',
+    comment: 'Great service, very professional!',
+    name: 'John Doe',
+    position: 'CEO',
+  },
+  {
+    company: 'TopTech',
+    comment: 'Excellent experience, highly recommended!',
+    name: 'Jane Smith',
+    position: 'Senior Developer',
+  },
+  {
+    company: 'Global Solutions',
+    comment: 'Outstanding work, exceeded our expectations!',
+    name: 'Alex Johnson',
+    position: 'Project Manager',
+  },
+  {
+    company: 'InnovateX',
+    comment: 'Exceptional quality and attention to detail!',
+    name: 'Emily Brown',
+    position: 'Marketing Director',
+  },
+  {
+    company: 'FutureBuilders',
+    comment: 'Impressive results, a pleasure to work with!',
+    name: 'Michael Wilson',
+    position: 'Operations Manager',
+  },
+  {
+    company: 'EcoFriendly',
+    comment: 'Professional and reliable service, thank you!',
+    name: 'Sophia Lee',
+    position: 'Environmental Specialist',
   },
 ]

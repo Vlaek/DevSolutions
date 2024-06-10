@@ -42,12 +42,14 @@ const Header: FC = () => {
       </div>
       <div className={classNames(styles.header__block, styles.header__block_right)}>
         <Navigation />
-        <button className={classNames(styles.header__button)} onClick={() => handleButton()}>
-          {currentLocale.toUpperCase()}
-        </button>
-        <button className={classNames(styles.header__button)} onClick={() => handleThemaButton()}>
-          {theme}
-        </button>
+        <div className={styles.header__button_list}>
+          <button className={classNames(styles.header__button)} onClick={() => handleButton()}>
+            {currentLocale.toUpperCase()}
+          </button>
+          <button className={classNames(styles.header__button)} onClick={() => handleThemaButton()}>
+            {theme}
+          </button>
+        </div>
       </div>
     </div>
   )
