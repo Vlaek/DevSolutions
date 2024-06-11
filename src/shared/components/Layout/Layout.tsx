@@ -13,7 +13,7 @@ interface ILayoutProps {
 
 const Layout: FC<ILayoutProps> = (props) => {
   const { header, main, footer } = props
-  const theme = useSelector((state: RootState) => state.theme.value)
+  const theme = useSelector((state: RootState) => state.main.theme)
 
   useLayoutEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)

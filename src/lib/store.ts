@@ -1,12 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import localeSlice from './features/header/localeSlice'
-import themeSlice from './features/header/themeSlice'
+import mainSlice from './features/Main/mainSlice'
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      local: localeSlice,
-      theme: themeSlice,
+      main: mainSlice,
     },
   })
 }
