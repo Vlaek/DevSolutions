@@ -2,9 +2,10 @@
 
 import { FC, useState, useEffect } from 'react'
 import Image from 'next/image'
-import { IProject, projectList } from '@/shared/data'
+import { projectList } from '@/shared/data'
 import { ProjectForm, ProjectsList, StackList } from '@/shared/components'
 import styles from './Project.module.scss'
+import { IProject } from '@/shared/types/models'
 
 interface IProjectProps {
   item: IProject

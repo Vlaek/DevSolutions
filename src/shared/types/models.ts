@@ -48,9 +48,10 @@ export interface IProject {
   id: number
   title: string
   subtitle: string
-  description?: string
   url: string
   technologies: string[]
   img: string
   stack: string[]
+  screens?: string[]
+  github?: string
 }

@@ -6,7 +6,8 @@ import { ContactsForm, ProjectsList, Title } from '@/shared/components'
 import styles from './Projects.module.scss'
 import classNames from 'classnames'
 import { checkObjectIsArrayByKey } from '@/shared/helpers/helperObject'
-import { ICategory, IProject, categories, projectList } from '@/shared/data'
+import { categories, projectList } from '@/shared/data'
+import { ICategory, IProject } from '@/shared/types/models'
 
 const Projects: FC = () => {
   const [selectedCategories, setSelectedCategories] = useState<ICategory[]>([])

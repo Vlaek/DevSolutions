@@ -17,17 +17,17 @@
     &__title {
       font-size: 38px;
       font-weight: bold;
-    }
-
-    &__subtitle {
+      color: $main-orange;
     }
   }
 
   img {
     max-width: 100%;
-    width: clamp(670px, 60vw - 240px, 970px);
+    width: clamp(500px, 60vw - 300px, 700px);
     height: auto;
     flex-shrink: 0;
+    border-radius: 10px;
+    outline: 1px solid $main-medium-gray;
   }
 }
 

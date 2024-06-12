@@ -26,6 +26,7 @@
       height: clamp(340px, 42.9166666667vw - 278px, 546px);
       background-color: $main-dark-gray;
       border-radius: 10px;
+      outline: 3px solid $main-medium-gray;
 
       img {
         position: absolute;
@@ -34,6 +35,7 @@
         inset: 0px;
         object-fit: contain;
         object-position: center center;
+        border-radius: 10px;
       }
     }
 
@@ -49,6 +51,7 @@
         justify-content: center;
         align-items: center;
         color: $main-orange;
+        margin-bottom: 10px;
       }
 
       &__subtitle {

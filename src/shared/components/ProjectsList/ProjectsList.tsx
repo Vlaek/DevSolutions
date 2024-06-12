@@ -2,10 +2,10 @@
 
 import { FC } from 'react'
 import styles from './ProjectsList.module.scss'
-import { IProject } from '@/shared/data'
 import { StackList } from '../StackList/StackList'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import { IProject } from '@/shared/types/models'
 
 interface IProjectsListProps {
   items: IProject[]
