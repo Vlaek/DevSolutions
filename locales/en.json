@@ -1,80 +1,92 @@
 {
-  "MainPage": {
-    "title": "Hello world!"
-  },
-  "ServicesPage": {
-    "title": "Our Services",
-    "subtitle": "We can, we know, we do"
-  },
-  "ProjectsPage": {
-    "title": "Our projects",
-    "subtitle": "We are happy to share the results of our work with you :)"
-  },
-  "WorkPage": {
-    "title": "Work with Us",
-    "subtitle": "Join us"
-  },
-  "FAQPage": {
-    "subtitle": "Questions we already know the answer for"
-  },
-  "Header": {
-    "services": "Services",
-    "projects": "Projects",
-    "work": "Work with us",
-    "contacts": "Contact us"
-  },
-  "Footer": {
-    "city": "Tomsk",
-    "partnership": "Partnership",
-    "career": "Career",
-    "address": "Pushkin street, Kolotushkin house",
-    "slogan": "Best Solutions for Complex Systems"
-  },
-  "ContactsForm": {
-    "header": {
-      "title": {
-        "1": "Do you have",
-        "2": "a project",
-        "3": "or",
-        "4": "an idea",
-        "5": "for implementation?"
-      },
-      "description": "Tell us, fill out the form below and we will discuss the details"
-    },
-    "placeholder": {
-      "name": "Your name, please",
-      "about": "Briefly describe your idea"
-    },
-    "footer": "By clicking the \"Submit\" button, I agree to the privacy policy and the processing of personal data",
-    "button": "submit"
-  },
-  "WorkForm": {
-    "header": {
-      "title": {
-        "1": "Interested with",
-        "2": "work",
-        "3": "with us?"
-      },
-      "description": "Leave your contact details and our HR manager will contact you for further details"
-    },
-    "placeholder": {
-      "name": "Introduce yourself, please",
-      "nick": "Telegram nickname",
-      "jobPosition": "What do you want to do?",
-      "about": "Tell us about yourself"
-    },
-    "footer": "By clicking the \"Submit\" button, I agree to the privacy policy and the processing of personal data",
-    "button": "submit"
-  },
-  "ProjectForm": {
-    "header": {
-      "title": "Project documentation",
-      "description": "To receive the project documentation, you must fill out the request form. After verification, we will send a package of documents to the email you specified"
-    },
-    "placeholder": {
-      "name": "Introduce yourself, please",
-      "company": "Company"
-    },
-    "button": "Send a request"
-  }
+	"MainPage": {
+		"title": "Создаем цифровые продукты",
+		"subtitle": "Проектируем и разрабатываем системы для среднего и крупного бизнеса",
+		"header": {
+			"1": "We make",
+			"2": "web services",
+			"3": "systems",
+			"4": "and",
+			"5": "mobile applications",
+			"subtitle": "We guarantee an individual approach to each client and a set of optimal solutions for your project"
+		},
+		"button": "Our projects",
+		"partners": "Our partners",
+		"feedback": "Reviews"
+	},
+	"ServicesPage": {
+		"title": "Our Services",
+		"subtitle": "We can, we know, we do"
+	},
+	"ProjectsPage": {
+		"title": "Our projects",
+		"subtitle": "We are happy to share the results of our work with you :)"
+	},
+	"WorkPage": {
+		"title": "Work with Us",
+		"subtitle": "Join us"
+	},
+	"FAQPage": {
+		"subtitle": "Questions we already know the answer for"
+	},
+	"Header": {
+		"services": "Services",
+		"projects": "Projects",
+		"work": "Work with us",
+		"contacts": "Contact us"
+	},
+	"Footer": {
+		"city": "Tomsk",
+		"partnership": "Partnership",
+		"career": "Career",
+		"address": "Pushkin street, Kolotushkin house",
+		"slogan": "Best Solutions for Complex Systems"
+	},
+	"ContactsForm": {
+		"header": {
+			"title": {
+				"1": "Do you have",
+				"2": "a project",
+				"3": "or",
+				"4": "an idea",
+				"5": "for implementation?"
+			},
+			"description": "Tell us, fill out the form below and we will discuss the details"
+		},
+		"placeholder": {
+			"name": "Your name, please",
+			"about": "Briefly describe your idea"
+		},
+		"footer": "By clicking the \"Submit\" button, I agree to the privacy policy and the processing of personal data",
+		"button": "submit"
+	},
+	"WorkForm": {
+		"header": {
+			"title": {
+				"1": "Interested with",
+				"2": "work",
+				"3": "with us?"
+			},
+			"description": "Leave your contact details and our HR manager will contact you for further details"
+		},
+		"placeholder": {
+			"name": "Introduce yourself, please",
+			"nick": "Telegram nickname",
+			"jobPosition": "What do you want to do?",
+			"about": "Tell us about yourself"
+		},
+		"footer": "By clicking the \"Submit\" button, I agree to the privacy policy and the processing of personal data",
+		"button": "submit"
+	},
+	"ProjectForm": {
+		"header": {
+			"title": "Project documentation",
+			"description": "To receive the project documentation, you must fill out the request form. After verification, we will send a package of documents to the email you specified"
+		},
+		"placeholder": {
+			"name": "Introduce yourself, please",
+			"company": "Company"
+		},
+		"button": "Send a request"
+	}
 }
