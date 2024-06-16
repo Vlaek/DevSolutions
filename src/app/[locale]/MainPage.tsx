@@ -16,11 +16,9 @@ const MainPage: FC = () => {
 					<h1 className={styles.header__main__title}>{t('title')}</h1>
 					<p className={styles.header__main__subtitle}>{t('subtitle')}</p>
 					<ul className={styles.header__main__list}>
-						<li className={styles.header__main__list__item}>#Mobile_app</li>
-						<li className={styles.header__main__list__item}>#Web_system</li>
-						<li className={styles.header__main__list__item}>
-							#embedded_System
-						</li>
+						<li className={styles.header__main__list__item}>#Web</li>
+						<li className={styles.header__main__list__item}>#Mobile</li>
+						<li className={styles.header__main__list__item}>#System</li>
 					</ul>
 				</div>
 				<video
