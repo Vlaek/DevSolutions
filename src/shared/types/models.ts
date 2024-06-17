@@ -17,7 +17,6 @@ export interface ICard {
 export interface IAboutUsCard {
   title: string
   subtitle: string
-  img: string
 }
 
 export interface IVacancy {

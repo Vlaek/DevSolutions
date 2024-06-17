@@ -436,189 +436,51 @@ export const projectList: IProject[] = [
   },
 ]
 
-// export const projectList: IProject[] = [
-//   {
-//     id: 0,
-//     title: 'Система обеспечения безопасности сотрудников на производстве «ДиэтархА»',
-//     subtitle: 'Реализация системы, автоматизирующая процессы контроля техники безопасности',
-//     img: '/img/projects/1.webp',
-//     url: 'dietarkha',
-//     technologies: ['Python', 'Fastapi', 'TypeScript', 'React', 'Flutter', 'Dart'],
-//     stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
-//   },
-//   {
-//     id: 1,
-//     title: 'Судейская система для проведения соревнований «Aerobiq»',
-//     subtitle: 'Реализация системы, автоматизирующая процесс организации спортивных соревнований',
-//     img: '/img/projects/2.webp',
-//     url: 'aerobiq',
-//     technologies: ['Python', 'Postgresql', 'React', 'Next.js'],
-//     stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
-//   },
-//   {
-//     id: 2,
-//     title: 'Определение и отслеживание пешеходов в видеоряде',
-//     subtitle: 'Определение и отслеживание пешеходов в видеоряде с последующим определением их...',
-//     img: '/img/projects/3.webp',
-//     url: 'ped-neuron',
-//     technologies: [
-//       'Python',
-//       'Celery',
-//       'Postgresql',
-//       'Pytorch',
-//       'Opencv',
-//       'Pycuda',
-//       'TensorRT',
-//       'Sqlalchemy',
-//       'Grpc',
-//       'Fastapi',
-//       'Zeromq',
-//       'Redis',
-//       'Docker',
-//       'Ffmpeg',
-//       'Webrtc (Janus)',
-//       'Websockets',
-//       'Firebase',
-//     ],
-//     stack: ['Web'],
-//   },
-//   {
-//     id: 3,
-//     title: 'Сервис для поиска и бронирования отелей по России',
-//     subtitle: 'Сервис позволяет гостям подбирать и бронировать жилье по городам России',
-//     img: '/img/projects/4.webp',
-//     url: 'innbi',
-//     technologies: [
-//       'Java',
-//       'Python',
-//       'Celery',
-//       'Sqlalchemy',
-//       'Redis',
-//       'TypeScript',
-//       'React',
-//       'Flutter',
-//       'Kafka',
-//     ],
-//     stack: ['Web', 'Analytics', 'Design', 'Mobile', 'Testing'],
-//   },
-//   {
-//     id: 4,
-//     title: 'Веб-система по отображению новостей и событий',
-//     subtitle:
-//       'Визуализирует данные из областей информационных технологий, машиностроения, робототехники и других сфер',
-//     img: '/img/projects/5.webp',
-//     url: 'techradar',
-//     technologies: ['Python', 'Fastapi', 'TypeScript', 'React', 'Flutter', 'Dart'],
-//     stack: ['Web', 'Analytics', 'Testing'],
-//   },
-//   {
-//     id: 5,
-//     title: 'Информационная система для терминалов',
-//     subtitle:
-//       'Разработка комплекса автоматизированных решений для продажи SIM-карт через терминалы',
-//     img: '/img/projects/6.webp',
-//     url: 'simpad',
-//     technologies: ['Redux', 'Redis', 'Docker', 'React', 'PHP', 'Mysql', 'Laravel', 'Voyager'],
-//     stack: ['Web', 'Analytics', 'Design', 'Hardware', 'Mobile', 'Testing'],
-//   },
-//   {
-//     id: 6,
-//     title: 'Комплекс мобильных приложений для фитнеса',
-//     subtitle: 'Приложения направлены на взаимодействие тренера и клиента',
-//     img: '/img/projects/7.webp',
-//     url: 'fitness',
-//     technologies: [
-//       'Python',
-//       'Postgresql',
-//       'Docker',
-//       'Firebase',
-//       'Flutter',
-//       'Dart',
-//       'BLoC',
-//       'Dio',
-//       'Django',
-//       'Docker-Compose',
-//       'Hive',
-//       'BLE',
-//     ],
-//     stack: ['Analytics', 'Mobile', 'Testing'],
-//   },
-//   {
-//     id: 7,
-//     title: 'Информационные сайты спортивных организаций',
-//     subtitle: 'Реализация сайтов в соответствии с требованиями Федеральных законов',
-//     img: '/img/projects/8.webp',
-//     url: 'sports',
-//     technologies: ['JavaScript', 'Redux', 'Python', 'Docker', 'React', 'Django', 'Docker-Compose'],
-//     stack: ['Web', 'Analytics', 'Mobile', 'Testing'],
-//   },
-//   {
-//     id: 8,
-//     title: 'Приложение для путешествий по необычным местам Парижа',
-//     subtitle:
-//       'Мобильное приложение с тематическими маршрутами, для прогулок туристов в различных...',
-//     img: '/img/projects/9.webp',
-//     url: 'ouiguide',
-//     technologies: [
-//       'Swift',
-//       'CoreLocation',
-//       'MapKit',
-//       'CleanSwift(VIP)',
-//       'OneSignal',
-//       'AVFoundation',
-//       'Moya',
-//       'Sign in with Google',
-//       'Sign in with Facebook',
-//       'R.Swift',
-//       'SwiftLint',
-//     ],
-//     stack: ['Analytics', 'Design', 'Mobile', 'Testing'],
-//   },
-//   {
-//     id: 9,
-//     title: 'Мобильное приложение по операциям с криптовалютой',
-//     subtitle:
-//       'Реализация системы, позволяющая осуществлять внутренние и внешние платежные операции с фиатными валютами',
-//     img: '/img/projects/10.webp',
-//     url: 'bizonex',
-//     technologies: ['Firebase', 'Flutter', 'Dart', 'BLoC', 'GraphQL'],
-//     stack: ['Mobile'],
-//   },
-// ]
-
 export const aboutUsCards: IAboutUsCard[] = [
   {
     title: 'Забота о здоровье',
     subtitle: 'Компенсация за занятия спортом и дорогостоящего лечения',
-    img: '/img/healthcare.png',
   },
   {
     title: 'Развитие и обучение',
     subtitle:
       'Мы обеспечиваем участие в конференциях, частично покрываем расходы на курсы повышения квалификации',
-    img: '/img/training.png',
   },
   {
     title: 'Периодическая аттестация',
     subtitle: 'Индивидуальный план развития, пересмотр зарплаты и переход на новую должность',
-    img: '/img/certification.png',
   },
   {
     title: 'Библиотека',
     subtitle:
       'У нас есть корпоративная библиотека, где ты можешь найти что-то интересное для себя. Мы регулярно пополняем её, учитывая потребности сотрудников',
-    img: '/img/library.png',
   },
   {
     title: 'Корпоративная жизнь',
     subtitle: 'Вечера с настольными играми, дни рождения и корпоративы',
-    img: '/img/corpolife.png',
   },
   {
     title: 'Адаптация',
     subtitle:
       'С самого первого дня в нашей компании мы заботимся о твоей адаптации, чтобы ты легко влился в коллектив и привык к динамике нашей работы',
-    img: '/img/adaptation.png',
+  },
+]
+
+export const workCards: IAboutUsCard[] = [
+  {
+    title: 'Оставь заявку',
+    subtitle:
+      'Оставь заявку на сайте или напиши на почту vlad.eichwald@gmail.com, мы обязательно просмотрим твое резюме и дадим ответ',
+  },
+  {
+    title: 'Выполни тестовое задание',
+    subtitle:
+      'Наш HR менеджер свяжется с тобой, выяснит все подробности и отправит тебе тестовое задание на выполнение',
+  },
+  {
+    title: 'Пройди собеседование',
+    subtitle:
+      'После успешно выполненного тестового задания мы пригласим тебя на собеседование, где покажем тебе офис',
   },
 ]
 

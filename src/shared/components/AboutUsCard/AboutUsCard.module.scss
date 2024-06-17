@@ -1,49 +1,27 @@
 @import '@/shared/styles/variables';
 
-.about {
-  display: flex;
-  flex-direction: column;
-  row-gap: clamp(40px, 4.6296296296vw + 4.4444444444px, 60px);
-  margin: 140px 0 0;
+.item {
+  padding: 32px;
+  border-radius: 10px;
+  border: 1px solid $main-orange;
+  cursor: pointer;
+  transition: all 0.3s ease;
 
-  &__title {
-    font-size: 60px;
-    font-weight: bold;
+  &:hover {
+    transform: scale(1.02);
   }
 
-  &__cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: $main-orange;
+  }
 
-    &__item {
-      padding: 32px;
-      border-radius: 10px;
-      border: 1px solid $main-orange;
-
-      &__title {
-        font-size: 32px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 15px;
-      }
-
-      &__subtitle {
-        font-size: 18px;
-        color: $main-medium-gray;
-        min-height: 75px;
-      }
-
-      &__img {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-
-        &__item {
-          width: 340px;
-          height: 300px;
-        }
-      }
-    }
+  &__subtitle {
+    font-size: 18px;
+    color: var(--color);
+    min-height: 75px;
   }
 }

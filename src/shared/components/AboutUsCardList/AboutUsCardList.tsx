@@ -1,14 +1,25 @@
 import { FC } from 'react'
 import { AboutUsCard } from '../AboutUsCard/AboutUsCard'
-import { aboutUsCards } from '@/shared/data'
 import styles from './AboutUsCardList.module.scss'
+import { IAboutUsCard } from '@/shared/types/models'
 
-const AboutUsCardList: FC = () => {
+interface IAboutUsCardListProps {
+  title: string
+  subtitle?: string
+  cards: IAboutUsCard[]
+}
+
+const AboutUsCardList: FC<IAboutUsCardListProps> = (props) => {
+  const { title, subtitle, cards } = props
+
   return (
     <section className={styles.about}>
-      <h3 className={styles.about__title}>Почему мы</h3>
+      <div>
+        <h3 className={styles.about__title}>{title}</h3>
+        {subtitle && <p className={styles.about__subtitle}>{subtitle}</p>}
+      </div>
       <div className={styles.about__cards}>
-        {aboutUsCards.map((item) => (
+        {cards.map((item) => (
           <AboutUsCard key={item.title} item={item} />
         ))}
       </div>

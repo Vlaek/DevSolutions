@@ -11,6 +11,12 @@
     font-weight: bold;
   }
 
+  &__subtitle {
+    font-size: 18px;
+    color: $main-medium-gray;
+    max-width: 894px;
+  }
+
   &__cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

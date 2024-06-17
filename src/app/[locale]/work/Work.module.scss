@@ -26,59 +26,6 @@
   }
 }
 
-.common {
-  display: flex;
-  flex-direction: column;
-  margin: 140px 0 140px;
-
-  &__title {
-    font-size: 60px;
-    font-weight: bold;
-  }
-
-  &__subtitle {
-    font-size: 18px;
-    color: $main-medium-gray;
-    max-width: 894px;
-  }
-
-  &__cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-    margin-top: 60px;
-
-    &__item {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-radius: 10px;
-      border: 1px solid $main-orange;
-      padding: clamp(16px, 6.25vw - 4px, 32px);
-      transition: all 0.3s ease;
-
-      &__header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 90px;
-        margin-bottom: 25px;
-      }
-
-      &__title {
-        font-size: 28px;
-        font-weight: bold;
-        text-align: center;
-        color: $main-orange;
-      }
-
-      &__text {
-        text-align: justify;
-      }
-
-      &:hover {
-        transform: scale(1.02);
-      }
-    }
-  }
+.section {
+  margin-top: 140px;
 }
