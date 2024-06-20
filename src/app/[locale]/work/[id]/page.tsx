@@ -1,11 +1,11 @@
 import { FC } from 'react'
-import NotFound from '@/app/not-found'
 import { Metadata } from 'next'
 import VacancyPage from './VacancyPage'
 import { helperString } from '@/shared/helpers'
 import { vacancies } from '@/shared/data'
 import { meta } from '@/shared/meta'
 import { IVacancy } from '@/shared/types/models'
+import NotFound from '../../not-found'
 
 interface IWorkPageParams {
   params: {

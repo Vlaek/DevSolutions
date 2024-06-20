@@ -1,10 +1,11 @@
 import { FC } from 'react'
-import NotFound from '@/app/not-found'
 import { Metadata } from 'next'
 import { helperString } from '@/shared/helpers'
 import Project from './Project'
 import { meta } from '@/shared/meta'
-import { IProject, projectList } from '@/shared/data'
+import { projectList } from '@/shared/data'
+import { IProject } from '@/shared/types/models'
+import NotFound from '../../not-found'
 
 interface IProjectPageParams {
   params: {
@@ -28,7 +29,7 @@ const ProjectPage: FC<IProjectPageParams> = ({ params }) => {
 
   const metaTitle = helperString.capitalizeFirstLetterOfEachWord(project.title || 'Project')
   metadata.title = meta.getTitle(metaTitle)
-  metadata.description = project.description || 'Project Page'
+  metadata.description = project.subtitle || 'Project Page'
 
   return <Project item={project} />
 }

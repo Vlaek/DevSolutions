@@ -1,11 +1,11 @@
 import { FC } from 'react'
-import NotFound from '@/app/not-found'
 import { Metadata } from 'next'
 import { helperString } from '@/shared/helpers'
 import Service from './Service'
 import { meta } from '@/shared/meta'
 import { IService } from '@/shared/types/models'
 import { serviceList } from '@/shared/data'
+import NotFound from '../../not-found'
 
 interface IServicePageParams {
   params: {

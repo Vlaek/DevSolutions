@@ -1,0 +1,55 @@
+@import '@/shared/styles/variables';
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+  width: 100%;
+  height: calc(100vh - 170px);
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+
+    &__title {
+      color: $main-orange;
+      font-size: 100px;
+      font-weight: bold;
+      line-height: 100%;
+    }
+
+    &__subtitle {
+      font-size: 60px;
+      font-weight: bold;
+      color: var(--color);
+      line-height: 100%;
+    }
+
+    &__text {
+      font-size: 20px;
+      color: var(--color);
+      line-height: 100%;
+      margin-bottom: 50px;
+    }
+
+    &__button {
+      padding: 20px;
+      text-transform: uppercase;
+      color: $main-white;
+      background-color: $main-orange;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        filter: brightness(0.75)
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@ import { Footer } from './Footer/Footer'
 import { Header } from './Header/Header'
 import { Layout } from './Layout/Layout'
 import { Navigation } from './Navigation/Navigation'
+import { NotFoundPage } from './NotFoundPage/NotFoundPage'
 import { ProjectForm } from './ProjectForm/ProjectForm'
 import { ProjectsList } from './ProjectsList/ProjectsList'
 import { ServiceCard } from './ServiceCard/ServiceCard'
@@ -30,6 +31,7 @@ export {
   Header,
   Layout,
   Navigation,
+  NotFoundPage,
   ProjectForm,
   ProjectsList,
   ServiceCard,
