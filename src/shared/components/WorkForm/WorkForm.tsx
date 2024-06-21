@@ -5,6 +5,8 @@ import styles from './WorkForm.module.scss'
 import { CustomInput } from '../CustomInput/CustomInput'
 import { CustomTextarea } from '../CustomTextarea/CustomTextarea'
 import { useTranslations } from 'next-intl'
+import { useDispatch } from 'react-redux'
+import { changeIsModalActive } from '@/lib/features/Main/mainSlice'
 
 const initialValue = {
   name: '',
@@ -16,10 +18,15 @@ const initialValue = {
 
 const WorkForm: FC = () => {
   const [state, setState] = useState(initialValue)
+  const dispatch = useDispatch()
   const t = useTranslations('WorkForm')
 
   const onDataByKeyChange = (value: string | number | boolean | null, key: string): void => {
     setState({ ...state, [key]: value })
+  }
+
+  const handleButtonClick = () => {
+    dispatch(changeIsModalActive(true))
   }
 
   return (
@@ -27,11 +34,11 @@ const WorkForm: FC = () => {
       <div className={styles.form}>
         <div className={styles.form__header}>
           <h2 className={styles.form__header__title}>
-            {t('header.title.1')} <span className={styles.form__header__title_orange}>{t('header.title.2')}</span> {t('header.title.3')}
+            {t('header.title.1')}{' '}
+            <span className={styles.form__header__title_orange}>{t('header.title.2')}</span>{' '}
+            {t('header.title.3')}
           </h2>
-          <p className={styles.form__header__text}>
-          {t('header.description')}
-          </p>
+          <p className={styles.form__header__text}>{t('header.description')}</p>
         </div>
         <CustomInput
           value={state.name}
@@ -65,10 +72,10 @@ const WorkForm: FC = () => {
           onDataByKeyChange={onDataByKeyChange}
         />
         <div className={styles.form__footer}>
-          <p className={styles.form__footer__text}>
-          {t('footer')}
-          </p>
-          <button className={styles.form__footer__button}>{t('button')}</button>
+          <p className={styles.form__footer__text}>{t('footer')}</p>
+          <button className={styles.form__footer__button} onClick={() => handleButtonClick()}>
+            {t('button')}
+          </button>
         </div>
       </div>
     </div>

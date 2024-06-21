@@ -18,10 +18,10 @@ const Footer: FC = () => {
       <div className={styles.info}>
         <div className={styles.info__city}>{t('city')}</div>
         <div className={styles.info__link}>
-        {t('partnership')}: <a href=''>vlad.eichwald@gmail.com</a>
+          {t('partnership')}: <a href=''>vlad.eichwald@gmail.com</a>
         </div>
         <div className={styles.info__link}>
-        {t('career')}: <a href=''>vlad.eichwald@gmail.com</a>
+          {t('career')}: <a href=''>vlad.eichwald@gmail.com</a>
         </div>
         <div>
           <p>8 (800) 555-35-35</p>
@@ -29,7 +29,7 @@ const Footer: FC = () => {
         </div>
       </div>
       <div className={styles.about}>
-        <Link className='' href='/'>
+        <Link href='/'>
           <Image src='/next.svg' alt='test' width={1} height={1} className={styles.about__icon} />
         </Link>
         <div className={styles.about__text}>{t('slogan')}</div>

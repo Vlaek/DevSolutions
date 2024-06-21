@@ -4,6 +4,7 @@ import { FC, useLayoutEffect } from 'react'
 import styles from './Layout.module.scss'
 import { useSelector } from 'react-redux'
 import { RootState } from '@/lib/store'
+import { ModalConfirm } from '../ModalConfirm/ModalConfirm'
 
 interface ILayoutProps {
   header: React.ReactNode
@@ -24,6 +25,7 @@ const Layout: FC<ILayoutProps> = (props) => {
       <header className={styles.header}>{header}</header>
       <main className={styles.main}>{main}</main>
       <footer className={styles.footer}>{footer}</footer>
+      <ModalConfirm />
     </div>
   )
 }

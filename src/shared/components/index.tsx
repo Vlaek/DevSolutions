@@ -8,6 +8,7 @@ import { CustomTextarea } from './CustomTextarea/CustomTextarea'
 import { Footer } from './Footer/Footer'
 import { Header } from './Header/Header'
 import { Layout } from './Layout/Layout'
+import { ModalConfirm } from './ModalConfirm/ModalConfirm'
 import { Navigation } from './Navigation/Navigation'
 import { NotFoundPage } from './NotFoundPage/NotFoundPage'
 import { ProjectForm } from './ProjectForm/ProjectForm'
@@ -30,6 +31,7 @@ export {
   Footer,
   Header,
   Layout,
+  ModalConfirm,
   Navigation,
   NotFoundPage,
   ProjectForm,

@@ -42,7 +42,6 @@ const Work: FC = () => {
       </section>
       <AboutUsCardList cards={aboutUsCards} title='Почему мы' />
       <VacancyList />
-
       <AboutUsCardList
         cards={workCards}
         title='Только начинаешь?'

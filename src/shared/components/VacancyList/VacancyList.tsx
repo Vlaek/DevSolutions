@@ -35,7 +35,7 @@ const VacancyList: FC = () => {
                 {categories[category].map((vacancy: IVacancy) => (
                   <li
                     className={styles.jobs__cards__item}
-                    key={vacancy.title + vacancy.desc}
+                    key={vacancy.title + vacancy.level}
                     onClick={() => onClickHandle(vacancy)}
                   >
                     <p className={styles.jobs__cards__item__title}>{vacancy.title}</p>
