@@ -1,18 +1,31 @@
 import { FC } from 'react'
 import styles from './CustomInput.module.scss'
 import classNames from 'classnames'
+import { Path, UseFormRegister, FieldValues } from 'react-hook-form'
+import { ContactsFormType, WorkFormType } from '@/shared/types/forms'
 
 interface ICustomInputProps {
   placeholder: string
   value: string | number | null
-  keyValue: string
+  keyValue: Path<ContactsFormType> | Path<WorkFormType>
   type?: string
-  // className?: string
+  required: boolean
+  pattern?: RegExp
+  register: UseFormRegister<FieldValues>
   onDataByKeyChange(value: string | number | boolean | null, key: string): void
 }
 
 const CustomInput: FC<ICustomInputProps> = (props) => {
-  const { value, placeholder, keyValue, type = 'text', onDataByKeyChange } = props
+  const {
+    value,
+    placeholder,
+    keyValue,
+    type = 'text',
+    required,
+    pattern,
+    onDataByKeyChange,
+    register,
+  } = props
 
   const onChange = (event: any) => {
     const { value: currentValue } = event.target
@@ -33,10 +46,9 @@ const CustomInput: FC<ICustomInputProps> = (props) => {
       <input
         className={styles.input}
         value={value ?? ''}
-        name={keyValue}
         type={type}
         id={keyValue}
-        onChange={onChange}
+        {...register(keyValue, { required, onChange, pattern: pattern ?? /[\s\S]*/ })}
       />
     </div>
   )

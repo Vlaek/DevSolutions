@@ -1,18 +1,43 @@
 import { FC } from 'react'
 import styles from './CustomTextarea.module.scss'
 import classNames from 'classnames'
+import { Path, UseFormRegister, FieldValues } from 'react-hook-form'
+
+type ContactsFormType = {
+  name: string
+  email: string
+  about: string
+}
+
+type WorkFormType = {
+  name: string
+  email: string
+  tgNick: string
+  jobPosition: string
+  about: string
+}
 
 interface ICustomTextareaProps {
   placeholder: string
   value: string
-  keyValue: string
+  keyValue: Path<ContactsFormType | WorkFormType>
   type?: string
   width?: string
+  required: boolean
+  register: UseFormRegister<FieldValues>
   onDataByKeyChange(value: string | number | boolean | null, key: string): void
 }
 
 const CustomTextarea: FC<ICustomTextareaProps> = (props) => {
-  const { value, placeholder, width = '100%', keyValue, onDataByKeyChange } = props
+  const {
+    value,
+    placeholder,
+    width = '100%',
+    keyValue,
+    required,
+    onDataByKeyChange,
+    register,
+  } = props
 
   const style = {
     width,
@@ -35,10 +60,9 @@ const CustomTextarea: FC<ICustomTextareaProps> = (props) => {
       <textarea
         className={styles.textarea}
         value={value}
-        name={keyValue}
         id={styles.textarea}
-        onChange={onChange}
         rows={5}
+        {...register(keyValue, { required, onChange })}
       />
     </div>
   )

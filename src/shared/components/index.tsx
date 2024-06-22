@@ -5,6 +5,7 @@ import { BigButtonLink } from './BigButtonLink/BigButtonLink'
 import { ContactsForm } from './ContactsForm/ContactsForm'
 import { CustomInput } from './CustomInput/CustomInput'
 import { CustomTextarea } from './CustomTextarea/CustomTextarea'
+import { Error } from './Error/Error'
 import { Footer } from './Footer/Footer'
 import { Header } from './Header/Header'
 import { Layout } from './Layout/Layout'
@@ -28,6 +29,7 @@ export {
   ContactsForm,
   CustomInput,
   CustomTextarea,
+  Error,
   Footer,
   Header,
   Layout,

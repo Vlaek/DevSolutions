@@ -17,3 +17,14 @@
    ```bash
    npm run dev
    ```
+
+# Technologies
+
+- HTML, SCSS Modules, TypeScript
+- NextJS 14
+- i18next
+- React Icons
+- React Transition Group
+- React Hook Form
+- Redux Toolkit
+- classnames
