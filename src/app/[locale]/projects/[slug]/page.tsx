@@ -6,6 +6,7 @@ import { meta } from '@/shared/meta'
 import { projectList } from '@/shared/data'
 import { IProject } from '@/shared/types/models'
 import NotFound from '../../not-found'
+import { useLocale } from 'next-intl'
 
 interface IProjectPageParams {
   params: {
@@ -19,8 +20,9 @@ export const metadata: Metadata = {
 }
 
 const ProjectPage: FC<IProjectPageParams> = ({ params }) => {
+  const locale = useLocale()
   const project = (() => {
-    return projectList.find((item: IProject) => item.url === params.slug) || null
+    return projectList[locale].find((item: IProject) => item.url === params.slug) || null
   })()
 
   if (project === null) {

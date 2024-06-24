@@ -1,4 +1,6 @@
-import { useTranslations } from 'next-intl'
+'use client'
+
+import { useLocale, useTranslations } from 'next-intl'
 import { FC } from 'react'
 import styles from './MainPage.module.scss'
 import classNames from 'classnames'
@@ -9,6 +11,7 @@ import Image from 'next/image'
 
 const MainPage: FC = () => {
   const t = useTranslations('MainPage')
+  const locale = useLocale()
 
   return (
     <div className={styles.main_container}>
@@ -44,7 +47,7 @@ const MainPage: FC = () => {
           <p className={styles.projects__header__description}>{t('header.subtitle')}</p>
         </div>
         <div className={styles.projects__list}>
-          {projectList.map((item) => (
+          {projectList[locale].map((item) => (
             <Link
               href={`/projects/${item.url}`}
               className={styles.projects__list__item}
@@ -84,7 +87,7 @@ const MainPage: FC = () => {
       <section className={classNames(styles.container, styles.feedback)}>
         <h2 className={styles.feedback__title}>{t('feedback')}</h2>
         <ul className={styles.feedback__grid}>
-          {feedbackList.map((feedback) => (
+          {feedbackList[locale].map((feedback) => (
             <li key={feedback.company} className={styles.feedback__grid__item}>
               <div className={styles.feedback__grid__item_block}>
                 <p className={styles.feedback__grid__item__title}>{feedback.company}</p>

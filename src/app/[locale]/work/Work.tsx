@@ -4,11 +4,12 @@ import { FC } from 'react'
 import { AboutUsCardList, Title, VacancyList, WorkForm } from '@/shared/components'
 import styles from './Work.module.scss'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
-import { aboutUsCards, workCards } from '@/shared/data'
+import { useLocale, useTranslations } from 'next-intl'
+import { aboutUsCards, vacancies, workCards } from '@/shared/data'
 
 const Work: FC = () => {
   const t = useTranslations('WorkPage')
+  const locale = useLocale()
 
   return (
     <div className={styles.work}>
@@ -40,10 +41,10 @@ const Work: FC = () => {
           aria-hidden={true}
         />
       </section>
-      <AboutUsCardList cards={aboutUsCards} title='Почему мы' />
-      <VacancyList />
+      <AboutUsCardList cards={aboutUsCards[locale]} title='Почему мы' />
+      <VacancyList vacancies={vacancies[locale]} />
       <AboutUsCardList
-        cards={workCards}
+        cards={workCards[locale]}
         title='Только начинаешь?'
         subtitle='Мы принимаем студентов на стажировки и производственные практики. Если Вы программист, тестировщик, дизайнер или аналитик – у Вас есть отличная возможность получить новые знания и профессиональный опыт.'
       />

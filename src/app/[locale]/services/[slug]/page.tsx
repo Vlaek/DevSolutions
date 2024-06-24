@@ -6,6 +6,7 @@ import { meta } from '@/shared/meta'
 import { IService } from '@/shared/types/models'
 import { serviceList } from '@/shared/data'
 import NotFound from '../../not-found'
+import { useLocale } from 'next-intl'
 
 interface IServicePageParams {
   params: {
@@ -19,8 +20,10 @@ export const metadata: Metadata = {
 }
 
 const ServicePage: FC<IServicePageParams> = ({ params }) => {
+  const locale = useLocale()
+
   const service = (() => {
-    return serviceList.find((item: IService) => item.card.url === params.slug) || null
+    return serviceList[locale].find((item: IService) => item.card.url === params.slug) || null
   })()
 
   if (service === null) {

@@ -6,6 +6,7 @@ import { projectList } from '@/shared/data'
 import { ProjectForm, ProjectsList, StackList } from '@/shared/components'
 import styles from './Project.module.scss'
 import { IProject } from '@/shared/types/models'
+import { useLocale } from 'next-intl'
 
 interface IProjectProps {
   item: IProject
@@ -13,10 +14,11 @@ interface IProjectProps {
 
 const Project: FC<IProjectProps> = (props) => {
   const { item } = props
-  const [filteredProjects, setFilteredProjects] = useState<IProject[]>(projectList)
+  const locale = useLocale()
+  const [filteredProjects, setFilteredProjects] = useState<IProject[]>(projectList[locale])
 
   useEffect(() => {
-    const projectsCopy = [...projectList.filter((project) => project.title !== item.title)]
+    const projectsCopy = [...projectList[locale].filter((project) => project.title !== item.title)]
     const randomProjects = []
     while (randomProjects.length < 3 && projectsCopy.length > 0) {
       const randomIndex = Math.floor(Math.random() * projectsCopy.length)
@@ -24,7 +26,7 @@ const Project: FC<IProjectProps> = (props) => {
       randomProjects.push(removedProjects[0])
     }
     setFilteredProjects(randomProjects)
-  }, [item])
+  }, [item, locale])
 
   return (
     <>

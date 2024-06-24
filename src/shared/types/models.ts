@@ -1,3 +1,12 @@
+export interface ILocaleList<T> {
+  [key: string]: T[]
+}
+
+export interface IFAQ {
+  q: string
+  a: string
+}
+
 export interface IService {
   card: ICard
   isOrange?: boolean

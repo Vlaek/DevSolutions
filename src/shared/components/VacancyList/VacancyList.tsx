@@ -2,11 +2,10 @@
 
 import { FC } from 'react'
 import styles from './VacancyList.module.scss'
-import { vacancies } from '@/shared/data'
 import { IVacancy } from '@/shared/types/models'
 import { useRouter } from 'next/navigation'
 
-const categorizeVacancies = () => {
+const categorizeVacancies = (vacancies: IVacancy[]) => {
   return vacancies.reduce((acc: any, vacancy) => {
     if (!acc[vacancy.category]) {
       acc[vacancy.category] = []
@@ -16,8 +15,13 @@ const categorizeVacancies = () => {
   }, {})
 }
 
-const VacancyList: FC = () => {
-  const categories = categorizeVacancies()
+interface IVacancyList {
+  vacancies: IVacancy[]
+}
+
+const VacancyList: FC<IVacancyList> = (props) => {
+  const { vacancies } = props
+  const categories = categorizeVacancies(vacancies)
   const router = useRouter()
   const onClickHandle = (item: IVacancy) => {
     router.push(`/work/${item.id}`)

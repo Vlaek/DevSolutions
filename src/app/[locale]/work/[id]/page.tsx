@@ -6,6 +6,7 @@ import { vacancies } from '@/shared/data'
 import { meta } from '@/shared/meta'
 import { IVacancy } from '@/shared/types/models'
 import NotFound from '../../not-found'
+import { useLocale } from 'next-intl'
 
 interface IWorkPageParams {
   params: {
@@ -20,8 +21,9 @@ export const metadata: Metadata = {
 }
 
 const WorkPage: FC<IWorkPageParams> = ({ params }) => {
+  const locale = useLocale()
   const vacancy = (() => {
-    return vacancies.find((item: IVacancy) => item.id === +params.id) || null
+    return vacancies[locale].find((item: IVacancy) => item.id === +params.id) || null
   })()
 
   if (vacancy === null) {

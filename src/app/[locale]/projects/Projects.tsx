@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, useEffect, useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { ContactsForm, ProjectsList, Title } from '@/shared/components'
 import { categories, projectList } from '@/shared/data'
 import { IProject } from '@/shared/types/models'
@@ -10,7 +10,8 @@ import styles from './Projects.module.scss'
 
 const Projects: FC = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
-  const [filteredProjects, setFilteredProjects] = useState<IProject[]>(projectList)
+  const locale = useLocale()
+  const [filteredProjects, setFilteredProjects] = useState<IProject[]>(projectList[locale])
   const t = useTranslations('ProjectsPage')
 
   const onClickCategory = (category: string) => {
@@ -23,11 +24,11 @@ const Projects: FC = () => {
 
   useEffect(() => {
     setFilteredProjects(
-      projectList.filter((project) => {
+      projectList[locale].filter((project) => {
         return selectedCategories.every((category) => project.stack.includes(category))
       }),
     )
-  }, [selectedCategories])
+  }, [selectedCategories, locale])
 
   return (
     <div>

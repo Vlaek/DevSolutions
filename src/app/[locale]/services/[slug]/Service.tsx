@@ -1,11 +1,12 @@
 'use client'
 
 import { FC, useEffect, useState } from 'react'
-import { ICard } from '@/shared/types/models'
+import { ICard, ILocaleList, IProject } from '@/shared/types/models'
 import { helperString } from '@/shared/helpers'
 import { ContactsForm, ProjectsList } from '@/shared/components'
 import styles from './Service.module.scss'
-import { IProject, projectList } from '@/shared/data'
+import { projectList } from '@/shared/data'
+import { useLocale } from 'next-intl'
 
 interface IService {
   card: ICard
@@ -13,14 +14,15 @@ interface IService {
 
 const Service: FC<IService> = (props) => {
   const { card } = props
-  const [filteredProjects, setFilteredProjects] = useState<IProject[]>(projectList)
+  const locale = useLocale()
+  const [filteredProjects, setFilteredProjects] = useState<IProject[]>(projectList[locale])
 
   useEffect(() => {
-    const filtered = projectList.filter((project) => {
+    const filtered = projectList[locale].filter((project) => {
       return project.stack.includes(card.category)
     })
     setFilteredProjects(filtered)
-  }, [card.category])
+  }, [card, locale])
 
   return (
     <div className={styles.card}>
