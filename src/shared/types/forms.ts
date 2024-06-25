@@ -12,4 +12,10 @@ export type WorkFormType = {
   about: string
 }
 
+export type ProjectFormType = {
+  name: string
+  email: string
+  company: string
+}
+
 export type CombinedFormType = WorkFormType | ContactsFormType

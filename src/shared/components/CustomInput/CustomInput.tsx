@@ -2,12 +2,12 @@ import { FC } from 'react'
 import styles from './CustomInput.module.scss'
 import classNames from 'classnames'
 import { Path, UseFormRegister, FieldValues } from 'react-hook-form'
-import { ContactsFormType, WorkFormType } from '@/shared/types/forms'
+import { ContactsFormType, ProjectFormType, WorkFormType } from '@/shared/types/forms'
 
 interface ICustomInputProps {
   placeholder: string
   value: string | number | null
-  keyValue: Path<ContactsFormType> | Path<WorkFormType>
+  keyValue: Path<ContactsFormType> | Path<WorkFormType> | Path<ProjectFormType>
   type?: string
   required: boolean
   pattern?: RegExp
