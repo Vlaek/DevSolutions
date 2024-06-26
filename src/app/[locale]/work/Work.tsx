@@ -17,18 +17,19 @@ const Work: FC = () => {
       <section className={styles.work__desc}>
         <div className={styles.work__desc__text}>
           <p>
-            <span>DevSolutions</span> - компания в области информационных технологий с
-            аккредитацией, специализирующаяся на разработке заказного программного обеспечения.
+            <span>DevSolutions </span>
+            {t('description.1')}
           </p>
           <p>
-            Наша экспертиза включает в себя <span>создание</span> веб и мобильных приложений. Мы
-            предоставляем полный спектр услуг по разработке ПО - от сбора требований клиента до
-            поддержки продукта после выпуска, благодаря нашим специалистам всех уровней.
+            {t('description.2')}
+            <span> {t('description.3')} </span>
+            {t('description.4')}
           </p>
           <p>
-            Основная задача нашей команды - <span> глубоко понимать </span>
-            каждую задачу, поступающую от клиента, чтобы предложить оптимальное решение для его{' '}
-            <span>бизнеса</span>.
+            {t('description.5')}
+            <span> {t('description.6')} </span>
+            {t('description.7')}
+            <span> {t('description.8')}</span>.
           </p>
         </div>
         <Image
@@ -41,12 +42,12 @@ const Work: FC = () => {
           aria-hidden={true}
         />
       </section>
-      <AboutUsCardList cards={aboutUsCards[locale]} title='Почему мы' />
-      <VacancyList vacancies={vacancies[locale]} />
+      <AboutUsCardList cards={aboutUsCards[locale]} title={t('aboutUsCard.1')} />
+      <VacancyList title={t('vacancy')} vacancies={vacancies[locale]} />
       <AboutUsCardList
         cards={workCards[locale]}
-        title='Только начинаешь?'
-        subtitle='Мы принимаем студентов на стажировки и производственные практики. Если Вы программист, тестировщик, дизайнер или аналитик – у Вас есть отличная возможность получить новые знания и профессиональный опыт.'
+        title={t('aboutUsCard.2')}
+        subtitle={t('aboutUsCard.subtitle')}
       />
       <section className={styles.section}>
         <WorkForm />

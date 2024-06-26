@@ -2,12 +2,12 @@
 
 import { FC, useState } from 'react'
 import styles from './ProjectForm.module.scss'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 import { changeIsModalActive } from '@/lib/features/Main/mainSlice'
 import { useDispatch } from 'react-redux'
 import { CustomInput, Error } from '@/shared/components/index'
-import { regExpEmail, regExpName } from '@/shared/constants'
+import * as regExp from '@/shared/constants'
 
 const initialValue = {
   name: '',
@@ -19,6 +19,7 @@ const ProjectForm: FC = () => {
   const [state, setState] = useState(initialValue)
   const dispatch = useDispatch()
   const t = useTranslations('ProjectForm')
+  const locale = useLocale()
 
   const {
     register,
@@ -42,17 +43,17 @@ const ProjectForm: FC = () => {
           <p className={styles.form__header__text}>{t('header.description')}</p>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Error isActive={Boolean(errors.name)} text='Пожалуйста, введите действительное имя' />
+          <Error isActive={Boolean(errors.name)} text={regExp.errorTextName[locale]} />
           <CustomInput
             value={state.name}
             placeholder={t('placeholder.name')}
             keyValue='name'
             register={register}
             required
-            pattern={regExpName}
+            pattern={regExp.regExpName}
             onDataByKeyChange={onDataByKeyChange}
           />
-          <Error isActive={Boolean(errors.company)} text='Это поле является обязательным' />
+          <Error isActive={Boolean(errors.company)} text={regExp.errorText[locale]} />
           <CustomInput
             value={state.company}
             placeholder={t('placeholder.company')}
@@ -61,17 +62,14 @@ const ProjectForm: FC = () => {
             required
             onDataByKeyChange={onDataByKeyChange}
           />
-          <Error
-            isActive={Boolean(errors.email)}
-            text='Пожалуйста, введите действительный адрес электронной почты'
-          />
+          <Error isActive={Boolean(errors.email)} text={regExp.errorTextEmail[locale]} />
           <CustomInput
             value={state.email}
             placeholder='E-mail'
             keyValue='email'
             register={register}
             required
-            pattern={regExpEmail}
+            pattern={regExp.regExpEmail}
             onDataByKeyChange={onDataByKeyChange}
           />
         </form>

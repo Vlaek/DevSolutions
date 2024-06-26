@@ -6,6 +6,7 @@ import classNames from 'classnames'
 import { ICard } from '@/shared/types/models'
 import { useRouter } from 'next/navigation'
 import { StackList } from '../StackList/StackList'
+import { useTranslations } from 'next-intl'
 
 interface IServiceCardProps {
   isOrange?: boolean
@@ -19,6 +20,7 @@ const formatId = (id: number): string => {
 
 const ServiceCard: FC<IServiceCardProps> = (props) => {
   const { item, isOrange = false, id } = props
+  const t = useTranslations('ServiceCard')
   const router = useRouter()
   const onClickHandle = () => {
     if (item.url) {
@@ -54,7 +56,7 @@ const ServiceCard: FC<IServiceCardProps> = (props) => {
               [styles.card__button_orange]: isOrange,
             })}
           >
-            Связаться с нами
+            {t('button')}
           </button>
         </div>
       </div>

@@ -1,3 +1,7 @@
+export interface ILocale<T> {
+  [key: string]: T
+}
+
 export interface ILocaleList<T> {
   [key: string]: T[]
 }

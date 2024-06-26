@@ -2,12 +2,12 @@
 
 import { FC, useState } from 'react'
 import styles from './WorkForm.module.scss'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useDispatch } from 'react-redux'
 import { changeIsModalActive } from '@/lib/features/Main/mainSlice'
 import { SubmitHandler, useForm, FieldValues } from 'react-hook-form'
 import { CustomInput, CustomTextarea, Error } from '@/shared/components/index'
-import { regExpEmail, regExpName, regExpNick } from '@/shared/constants'
+import * as regExp from '@/shared/constants'
 
 const initialValue = {
   name: '',
@@ -21,6 +21,7 @@ const WorkForm: FC = () => {
   const [state, setState] = useState(initialValue)
   const dispatch = useDispatch()
   const t = useTranslations('WorkForm')
+  const locale = useLocale()
 
   const {
     register,
@@ -48,43 +49,37 @@ const WorkForm: FC = () => {
           <p className={styles.form__header__text}>{t('header.description')}</p>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Error isActive={Boolean(errors.name)} text='Пожалуйста, введите действительное имя' />
+          <Error isActive={Boolean(errors.name)} text={regExp.errorTextName[locale]} />
           <CustomInput
             value={state.name}
             placeholder={t('placeholder.name')}
             keyValue='name'
             register={register}
             required
-            pattern={regExpName}
+            pattern={regExp.regExpName}
             onDataByKeyChange={onDataByKeyChange}
           />
-          <Error
-            isActive={Boolean(errors.email)}
-            text='Пожалуйста, введите действительный адрес электронной почты'
-          />
+          <Error isActive={Boolean(errors.email)} text={regExp.errorTextEmail[locale]} />
           <CustomInput
             value={state.email}
             placeholder='E-mail'
             keyValue='email'
             register={register}
             required
-            pattern={regExpEmail}
+            pattern={regExp.regExpEmail}
             onDataByKeyChange={onDataByKeyChange}
           />
-          <Error
-            isActive={Boolean(errors.tgNick)}
-            text='Пожалуйста, введите действительный telegram'
-          />
+          <Error isActive={Boolean(errors.tgNick)} text={regExp.errorTextNick[locale]} />
           <CustomInput
             value={state.tgNick}
             placeholder={t('placeholder.nick')}
             keyValue='tgNick'
             register={register}
             required
-            pattern={regExpNick}
+            pattern={regExp.regExpNick}
             onDataByKeyChange={onDataByKeyChange}
           />
-          <Error isActive={Boolean(errors.jobPosition)} text='Это поле является обязательным' />
+          <Error isActive={Boolean(errors.jobPosition)} text={regExp.errorText[locale]} />
           <CustomInput
             value={state.jobPosition}
             placeholder={t('placeholder.jobPosition')}
@@ -93,7 +88,7 @@ const WorkForm: FC = () => {
             required
             onDataByKeyChange={onDataByKeyChange}
           />
-          <Error isActive={Boolean(errors.about)} text='Это поле является обязательным' />
+          <Error isActive={Boolean(errors.about)} text={regExp.errorText[locale]} />
           <CustomTextarea
             value={state.about}
             placeholder={t('placeholder.about')}

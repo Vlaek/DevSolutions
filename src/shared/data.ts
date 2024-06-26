@@ -145,23 +145,23 @@ export const serviceList: ILocaleList<IService> = {
   en: [
     {
       card: {
-        title: 'MVP от 2 месяцев',
+        title: 'MVP in 2 months',
         subtitle:
-          'Из ваших требований выделяем только самый основной функционал для оценки гипотез',
+          'We select the most basic and necessary functionality from your requirements to evaluate hypotheses',
         category: 'MVP',
         description:
-          'Такой подход помогает нашим клиентам на более ранней стадии посмотреть на свой продукт с разных сторон, получить обратную связь от своих потенциальных клиентов, оценить конкурентную среду и более точно сформировать функциональные требования для будущего развития продукта.',
+          'This approach helps our customers to see their product from different angles at an earlier stage, get feedback from their potential customers, assess the competitive environment and form functional requirements more accurately for future product development',
         videoUrl: '/videos/MVP.mp4',
       },
       isOrange: true,
     },
     {
       card: {
-        title: 'МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ',
+        title: 'MOBILE APPLICATIONS',
         subtitle: '',
         category: 'Mobile',
         description:
-          'Учитывая ваши требования, разрабатываем нативные и кроссплатформенные приложения с уникальным дизайном и функционалом, полностью соответствующими вашим требованиям.',
+          'Taking into account your requirements, we develop native and cross-platform applications with a unique design and functionality that fully meet your requirements.',
         videoUrl: '/videos/mobile.mp4',
         full_stack: [
           'React Native',
@@ -201,11 +201,11 @@ export const serviceList: ILocaleList<IService> = {
     },
     {
       card: {
-        title: 'ВЕБ ПРИЛОЖЕНИЯ И САЙТЫ',
+        title: 'WEB APPLICATIONS AND SITES',
         subtitle: '',
         category: 'Web',
         description:
-          'Реализуем широкий функционал для сайта вашей организации с комплексным решением. Опираясь на мировые тренды и собственный опыт, создаем удобные и функциональные интерфейсы.',
+          "We implement wide functionality for your organization's website with a comprehensive solution. Based on global trends and our own experience, we create convenient and functional interfaces",
         videoUrl: '/videos/web.mp4',
         full_stack: [
           'JavaScript',
@@ -253,11 +253,11 @@ export const serviceList: ILocaleList<IService> = {
     },
     {
       card: {
-        title: 'ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ДЛЯ ВСТРАИВАЕМЫХ СИСТЕМ',
+        title: 'EMBEDDED SOFTWARE',
         subtitle: '',
         category: 'Hardware',
         description:
-          'Разработка программного обеспечения для встраиваемых систем различного функционала, от реализации отдельных функций до полной автоматизации вашего бизнеса. Переход к реализации услуг в современном формате.',
+          'Development of software for embedded systems of various functionality, from the implementation of individual functions to the complete automation of your business. Transition to the implementation of services in a modern format.',
         videoUrl: '/videos/hardware.mp4',
         full_stack: ['C++'],
         url: 'hardware',
@@ -268,8 +268,7 @@ export const serviceList: ILocaleList<IService> = {
         title: 'OUTSTAFF',
         category: 'Outstaff',
         subtitle: '',
-        description:
-          'Мы предлагаем выделенную команду или отдельных специалистов по следующим направлениям:',
+        description: 'We offer a dedicated team or individuals in the following areas:',
         videoUrl: '/videos/outstaff.mp4',
         stack: ['Analytics', 'Design', 'Mobile', 'Web', 'Testing'],
       },
@@ -285,7 +284,7 @@ export const projectList: ILocaleList<IProject> = {
       img: '/img/projects/project5.png',
       url: 'Music-Store',
       subtitle:
-        'The Music Store is a web application developed using React that provides users with the ability to view and buy music albums. The project was created as an educational and practical task to demonstrate frontend development skills using React and related technologies.',
+        'Музыкальный магазин - это веб-приложение, разработанное с использованием React, которое предоставляет пользователям возможность просматривать и покупать музыкальные альбомы. Проект был создан как образовательное и практическое задание для демонстрации навыков разработки интерфейса с использованием React и связанных с ним технологий.',
       github: 'https://github.com/Vlaek/MusicStore-React',
       technologies: [
         'HTML',
@@ -327,7 +326,7 @@ export const projectList: ILocaleList<IProject> = {
       img: '/img/projects/project7.png',
       url: 'Soundboard',
       subtitle:
-        'Soundboard is a web application developed using React that allows users to listen to tracks. The project was created as an educational and practical task to demonstrate frontend development skills using React and related technologies.',
+        'Soundboard - это веб-приложение, разработанное с использованием React, которое позволяет пользователям прослушивать треки. Проект был создан как образовательное и практическое задание для демонстрации навыков разработки интерфейса с использованием React и связанных с ним технологий.',
       github: 'https://github.com/Vlaek/Soundboard-React',
       technologies: [
         'HTML',
@@ -355,7 +354,7 @@ export const projectList: ILocaleList<IProject> = {
       img: '/img/projects/project11.png',
       url: 'CookBookHub',
       subtitle:
-        'CookBookHub is a React application that allows users to browse, create, edit, and delete recipes. Users can also add recipes to their favorites list. All of these actions are implemented using RTK Query, and the server is powered by json-server.',
+        'CookBook Hub - это приложение на основе React, которое позволяет пользователям просматривать, создавать, редактировать и удалять рецепты. Пользователи также могут добавлять рецепты в свой список избранных. Все эти действия выполняются с помощью RTK Query, а сервер работает на базе json-сервера.',
       github: 'https://github.com/Vlaek/CookBookHub',
       technologies: [
         'HTML',
@@ -385,7 +384,7 @@ export const projectList: ILocaleList<IProject> = {
       img: '/img/projects/project6.png',
       url: 'GKeep-Lite',
       subtitle:
-        'GKeep-Lite-React is a simple web application developed on React that allows you to create notes, edit, delete, move and change their color. Users can easily organize their notes by choosing a color that matches their mood or the content of the note. In addition, users can use the search function to quickly find the desired note. GKeep-Lite-React is a simple and user-friendly application for those who want to quickly create notes and organize their thoughts.',
+        'GKeep-Lite-React - это простое веб-приложение, разработанное на базе React, которое позволяет создавать заметки, редактировать, удалять, перемещать и изменять их цвет. Пользователи могут легко упорядочивать свои заметки, выбирая цвет, соответствующий их настроению или содержанию заметки. Кроме того, пользователи могут воспользоваться функцией поиска, чтобы быстро найти нужную заметку. GKeep-Lite-React - это простое и удобное приложение для тех, кто хочет быстро создавать заметки и упорядочивать свои мысли.',
       github: 'https://github.com/Vlaek/GKeep-Lite-React',
       technologies: [
         'HTML',
@@ -409,7 +408,7 @@ export const projectList: ILocaleList<IProject> = {
       img: '/img/projects/project10.png',
       url: 'Worms3D',
       subtitle:
-        'The pet project is a 3D model gallery built with React, where users can interact with the models by rotating them and changing the background. The project was created for the purpose of practicing the Three.js library. Users can explore different 3D models and manipulate them in a virtual environment, providing an interactive and engaging experience. This project serves as a learning opportunity for implementing Three.js in a React application and showcasing 3D modeling capabilities.',
+        'Проект pet - это галерея 3D-моделей, созданная с помощью React, где пользователи могут взаимодействовать с моделями, поворачивая их и меняя фон. Проект был создан с целью отработки работы с библиотекой Three.js. Пользователи могут изучать различные 3D-модели и манипулировать ими в виртуальной среде, обеспечивая интерактивный и привлекательный опыт. Этот проект служит возможностью обучения для реализации Three.js в приложении React и демонстрации возможностей 3D-моделирования.',
       github: 'https://github.com/Vlaek/Worms3D-React',
       technologies: [
         'HTML',
@@ -435,7 +434,7 @@ export const projectList: ILocaleList<IProject> = {
       img: '/img/projects/project8.png',
       url: 'SurveyForm',
       subtitle:
-        'SurveyForm is a simple pet project based on a freeCodeCamp assignment. The project is a survey form written in React Hook Form.',
+        'SurveyForm - это простой проект для домашних пользователей, основанный на задании freeCodeCamp. Проект представляет собой форму опроса, написанную в форме React Hook.',
       github: 'https://github.com/Vlaek/SurveyForm-React',
       technologies: [
         'HTML',
@@ -458,7 +457,7 @@ export const projectList: ILocaleList<IProject> = {
       id: 6,
       title: 'OnlineStore - Интернет магазин',
       subtitle:
-        'Product Showcase is a web application that represents a showcase of products. It consists of two pages: a page with a list of products and a page with detailed information about the product.',
+        'Product Showcase - это веб-приложение, представляющее собой демонстрацию продуктов. Оно состоит из двух страниц: страницы со списком продуктов и страницы с подробной информацией о продукте.',
       img: '/img/projects/project9.png',
       url: 'OnlineStore',
       github: 'https://github.com/Vlaek/ProductShowcase-React',
@@ -483,7 +482,7 @@ export const projectList: ILocaleList<IProject> = {
       id: 7,
       title: 'Ant Design приложение',
       subtitle:
-        'The goal of this project was to practice using ready-made components from Ant Design. Several pages were created, including a ToDo list with the ability to create task descriptions and due dates, an image gallery, an about us page with pagination, a team page, and a page showcasing other projects.',
+        'Целью этого проекта было попрактиковаться в использовании готовых компонентов от Ant Design. Было создано несколько страниц, включая список дел с возможностью создания описаний задач и сроков их выполнения, галерею изображений, страницу "О нас" с разбивкой по страницам, страницу команды и страницу, на которой представлены другие проекты.',
       img: '/img/projects/project12.png',
       url: 'AntDesign',
       github: 'https://github.com/Vlaek/AntDesign',
@@ -509,7 +508,7 @@ export const projectList: ILocaleList<IProject> = {
     {
       id: 8,
       title: 'АнгуляйWEB',
-      subtitle: 'This is my first Angular test project.',
+      subtitle: 'Это мой первый тестовый проект на Angular.',
       img: '/img/projects/project13.png',
       url: 'AngularTestProject',
       github: 'https://github.com/Vlaek/AngularTestProject',
@@ -520,7 +519,7 @@ export const projectList: ILocaleList<IProject> = {
       id: 9,
       title: 'Список Дел | Flask',
       subtitle:
-        'ToDo is a pet project developed using Flask, Python, JS, HTML and CSS, and is a simple but effective task management system. It provides the user with a user-friendly interface for creating, viewing and editing a task list.',
+        'ToDo - это пет-проект, разработанный с использованием Flask, Python, JS, HTML и CSS, и представляющий собой простую, но эффективную систему управления задачами. Он предоставляет пользователю удобный интерфейс для создания, просмотра и редактирования списка задач.',
       img: '/img/projects/project2.png',
       url: 'todo-flask',
       github: 'https://github.com/Vlaek/ToDo-Flask',
@@ -538,7 +537,7 @@ export const projectList: ILocaleList<IProject> = {
       id: 10,
       title: 'СУБД для проектной организации',
       subtitle:
-        'DB is a graphical interface based on the Flask framework for the Project Organizations database. MySQL is used as a database. The PyMySQL module was selected to implement queries in the database.',
+        'СУБД для проектной организации - это графический интерфейс, основанный на платформе Flask для базы данных проектных организаций. В качестве базы данных используется MySQL. Для реализации запросов в базе данных был выбран модуль PyMySQL.',
       url: 'db-flask',
       technologies: ['HTML, CSS, JavaScript', 'Python', 'Flask', 'PyMySQL'],
       img: '/img/projects/project3.png',
@@ -556,7 +555,7 @@ export const projectList: ILocaleList<IProject> = {
       id: 11,
       title: 'Donatik - скрипт для SAMP',
       subtitle:
-        'Donatik is a script designed to collect donations from other players, similar to the Donation Alerts platform, but specially adapted for SAMP. It opens a new path to financial growth in the game and allows you to create a top donation for different periods, helping to track player contributions and goals achieved.',
+        'Donatik - это скрипт, предназначенный для сбора пожертвований от других игроков, аналогичный платформе Donation Alerts, но специально адаптированный для SAMP. Он открывает новый путь к финансовому росту в игре и позволяет создавать топовые пожертвования за разные периоды, помогая отслеживать вклад игроков и достигнутые цели.',
       url: 'Donatik',
       technologies: ['Lua', 'imgui'],
       img: '/img/projects/project4.png',
@@ -574,7 +573,7 @@ export const projectList: ILocaleList<IProject> = {
   en: [
     {
       id: 0,
-      title: 'Музыкальный интернет-магазин MusicStore',
+      title: 'MusicStore Online Music Store',
       img: '/img/projects/project5.png',
       url: 'Music-Store',
       subtitle:
@@ -616,7 +615,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 1,
-      title: 'Сервис для поиска и прослушивания музыки',
+      title: 'Service for searching and listening to music',
       img: '/img/projects/project7.png',
       url: 'Soundboard',
       subtitle:
@@ -644,7 +643,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 2,
-      title: 'CookBookHub - База кулинарных знаний',
+      title: 'CookBookHub - Culinary knowledge base',
       img: '/img/projects/project11.png',
       url: 'CookBookHub',
       subtitle:
@@ -674,7 +673,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 3,
-      title: 'Сервис заметок - GKeep-Lite',
+      title: 'Note Service - GKeep-Lite',
       img: '/img/projects/project6.png',
       url: 'GKeep-Lite',
       subtitle:
@@ -698,7 +697,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 4,
-      title: 'Worms3D - 3D модели',
+      title: 'Worms3D - 3D models',
       img: '/img/projects/project10.png',
       url: 'Worms3D',
       subtitle:
@@ -724,7 +723,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 5,
-      title: 'SurveyForm - Надежный сервис для анкетирования',
+      title: 'SurveyForm is a reliable survey service',
       img: '/img/projects/project8.png',
       url: 'SurveyForm',
       subtitle:
@@ -749,7 +748,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 6,
-      title: 'OnlineStore - Интернет магазин',
+      title: 'OnlineStore',
       subtitle:
         'Product Showcase is a web application that represents a showcase of products. It consists of two pages: a page with a list of products and a page with detailed information about the product.',
       img: '/img/projects/project9.png',
@@ -774,7 +773,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 7,
-      title: 'Ant Design приложение',
+      title: 'Ant Design App',
       subtitle:
         'The goal of this project was to practice using ready-made components from Ant Design. Several pages were created, including a ToDo list with the ability to create task descriptions and due dates, an image gallery, an about us page with pagination, a team page, and a page showcasing other projects.',
       img: '/img/projects/project12.png',
@@ -801,7 +800,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 8,
-      title: 'АнгуляйWEB',
+      title: 'AngularWeb',
       subtitle: 'This is my first Angular test project.',
       img: '/img/projects/project13.png',
       url: 'AngularTestProject',
@@ -811,7 +810,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 9,
-      title: 'Список Дел | Flask',
+      title: 'ToDo | Flask',
       subtitle:
         'ToDo is a pet project developed using Flask, Python, JS, HTML and CSS, and is a simple but effective task management system. It provides the user with a user-friendly interface for creating, viewing and editing a task list.',
       img: '/img/projects/project2.png',
@@ -829,7 +828,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 10,
-      title: 'СУБД для проектной организации',
+      title: 'DBMS for the project organization',
       subtitle:
         'DB is a graphical interface based on the Flask framework for the Project Organizations database. MySQL is used as a database. The PyMySQL module was selected to implement queries in the database.',
       url: 'db-flask',
@@ -847,7 +846,7 @@ export const projectList: ILocaleList<IProject> = {
     },
     {
       id: 11,
-      title: 'Donatik - скрипт для SAMP',
+      title: 'Donatik - script for SAMP',
       subtitle:
         'Donatik is a script designed to collect donations from other players, similar to the Donation Alerts platform, but specially adapted for SAMP. It opens a new path to financial growth in the game and allows you to create a top donation for different periods, helping to track player contributions and goals achieved.',
       url: 'Donatik',
@@ -898,31 +897,31 @@ export const aboutUsCards: ILocaleList<IAboutUsCard> = {
   ],
   en: [
     {
-      title: 'Забота о здоровье',
-      subtitle: 'Компенсация за занятия спортом и дорогостоящего лечения',
+      title: 'Health Care',
+      subtitle: 'Compensation for sports and expensive treatment',
     },
     {
-      title: 'Развитие и обучение',
+      title: 'Development and training',
       subtitle:
-        'Мы обеспечиваем участие в конференциях, частично покрываем расходы на курсы повышения квалификации',
+        'We provide participation in conferences, partially cover the costs of advanced training courses',
     },
     {
-      title: 'Периодическая аттестация',
-      subtitle: 'Индивидуальный план развития, пересмотр зарплаты и переход на новую должность',
+      title: 'Periodic certification',
+      subtitle: 'Individual development plan, salary review and transition to a new position',
     },
     {
-      title: 'Библиотека',
+      title: 'Library',
       subtitle:
-        'У нас есть корпоративная библиотека, где ты можешь найти что-то интересное для себя. Мы регулярно пополняем её, учитывая потребности сотрудников',
+        'We have a corporate library where you can find something interesting for yourself. We regularly replenish it, taking into account the needs of employees.',
     },
     {
-      title: 'Корпоративная жизнь',
-      subtitle: 'Вечера с настольными играми, дни рождения и корпоративы',
+      title: 'Corporate life',
+      subtitle: 'Board game nights, birthdays and corporate events',
     },
     {
-      title: 'Адаптация',
+      title: 'Adaptation',
       subtitle:
-        'С самого первого дня в нашей компании мы заботимся о твоей адаптации, чтобы ты легко влился в коллектив и привык к динамике нашей работы',
+        'From the very first day in our company, we take care of your adaptation so that you easily join the team and get used to the dynamics of our work',
     },
   ],
 }
@@ -947,19 +946,19 @@ export const workCards: ILocaleList<IAboutUsCard> = {
   ],
   en: [
     {
-      title: 'Оставь заявку',
+      title: 'Leave a request',
       subtitle:
-        'Оставь заявку на сайте или напиши на почту vlad.eichwald@gmail.com, мы обязательно просмотрим твое резюме и дадим ответ',
+        'Leave a request on the website or write to vlad.eichwald@gmail.com, we will definitely review your resume and give you an answer',
     },
     {
-      title: 'Выполни тестовое задание',
+      title: 'Complete the test task',
       subtitle:
-        'Наш HR менеджер свяжется с тобой, выяснит все подробности и отправит тебе тестовое задание на выполнение',
+        'Our HR manager will contact you, find out all the details and send you a test task to complete',
     },
     {
-      title: 'Пройди собеседование',
+      title: 'Pass the interview',
       subtitle:
-        'После успешно выполненного тестового задания мы пригласим тебя на собеседование, где покажем тебе офис',
+        'After successfully completing the test task, we will invite you for an interview, where we will show you the office and introduce you to our team',
     },
   ],
 }

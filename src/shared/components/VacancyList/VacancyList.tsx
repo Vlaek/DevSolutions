@@ -16,11 +16,12 @@ const categorizeVacancies = (vacancies: IVacancy[]) => {
 }
 
 interface IVacancyList {
+  title: string
   vacancies: IVacancy[]
 }
 
 const VacancyList: FC<IVacancyList> = (props) => {
-  const { vacancies } = props
+  const { title, vacancies } = props
   const categories = categorizeVacancies(vacancies)
   const router = useRouter()
   const onClickHandle = (item: IVacancy) => {
@@ -30,7 +31,7 @@ const VacancyList: FC<IVacancyList> = (props) => {
   return (
     vacancies.length > 0 && (
       <section className={styles.jobs}>
-        <h3 className={styles.jobs__title}>Наши вакансии</h3>
+        <h3 className={styles.jobs__title}>{title}</h3>
         <ul className={styles.jobs__block__list}>
           {Object.keys(categories).map((category) => (
             <li className={styles.jobs__block} key={category}>

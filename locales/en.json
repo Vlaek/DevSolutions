@@ -1,7 +1,7 @@
 {
   "MainPage": {
-    "title": "Создаем цифровые продукты",
-    "subtitle": "Проектируем и разрабатываем системы для среднего и крупного бизнеса",
+    "title": "We create digital products",
+    "subtitle": "Designing and developing systems for medium and large businesses",
     "header": {
       "1": "We make",
       "2": "web services",
@@ -14,9 +14,16 @@
     "partners": "Our partners",
     "feedback": "Reviews"
   },
+  "Service": {
+    "stack": "Our stack",
+    "experience": "Our experience"
+  },
   "ServicesPage": {
     "title": "Our Services",
     "subtitle": "We can, we know, we do"
+  },
+  "ServiceCard": {
+    "button": "Contact us"
   },
   "ProjectsPage": {
     "title": "Our projects",
@@ -24,7 +31,23 @@
   },
   "WorkPage": {
     "title": "Work with Us",
-    "subtitle": "Join us"
+    "subtitle": "Join us",
+    "description": {
+      "1": "is an accredited information technology company specializing in custom software development.",
+      "2": "Our expertise includes the",
+      "3": "creation",
+      "4": "of web and mobile applications. We provide a full range of software development services, from collecting customer requirements to product support after release, thanks to our specialists at all levels.",
+      "5": "The main task of our team is to",
+      "6": "deeply understand",
+      "7": "each task coming from the client in order to offer the optimal solution for his",
+      "8": "business"
+    },
+    "aboutUsCard": {
+      "1": "Why us",
+      "2": "Just starting?",
+      "subtitle": "We accept students for internships and industrial practices. If you are a programmer, tester, designer or analyst, you have a great opportunity to gain new knowledge and professional experience."
+    },
+    "vacancy": "Our vacancies"
   },
   "FAQPage": {
     "subtitle": "Questions we already know the answer for"
