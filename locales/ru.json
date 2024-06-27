@@ -29,6 +29,12 @@
     "title": "Наши проекты",
     "subtitle": "Рады поделиться с вами результатами своей работы :)"
   },
+  "Project": {
+    "technologies": "Technologies used",
+    "more": "More projects",
+    "result": "Результат работы",
+    "button": "Посмотреть на сайт"
+  },
   "WorkPage": {
     "title": "Работа у нас",
     "subtitle": "Присоединяйтесь к нам",

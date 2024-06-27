@@ -29,6 +29,12 @@
     "title": "Our projects",
     "subtitle": "We are happy to share the results of our work with you :)"
   },
+  "Project": {
+    "technologies": "Technologies used",
+    "more": "More projects",
+    "result": "Result",
+    "button": "View website"
+  },
   "WorkPage": {
     "title": "Work with Us",
     "subtitle": "Join us",

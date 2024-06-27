@@ -6,7 +6,7 @@ import { projectList } from '@/shared/data'
 import { ProjectForm, ProjectsList, StackList } from '@/shared/components'
 import styles from './Project.module.scss'
 import { IProject } from '@/shared/types/models'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 interface IProjectProps {
   item: IProject
@@ -16,6 +16,7 @@ const Project: FC<IProjectProps> = (props) => {
   const { item } = props
   const locale = useLocale()
   const [filteredProjects, setFilteredProjects] = useState<IProject[]>(projectList[locale])
+  const t = useTranslations('Project')
 
   useEffect(() => {
     const projectsCopy = [...projectList[locale].filter((project) => project.title !== item.title)]
@@ -39,7 +40,7 @@ const Project: FC<IProjectProps> = (props) => {
         <Image src={item.img} width={500} height={500} alt='Project Image' draggable={false} />
       </section>
       <section className={styles.info}>
-        <h2 className={styles.info__title}>Используемые технологии</h2>
+        <h2 className={styles.info__title}>{t('technologies')}</h2>
         <ul className={styles.info__list}>
           {item.technologies.map((tech) => (
             <li className={styles.info__list__item} key={tech}>
@@ -48,9 +49,15 @@ const Project: FC<IProjectProps> = (props) => {
           ))}
         </ul>
       </section>
+      <section className={styles.info}>
+        <h2 className={styles.info__title}>{t('result')}</h2>
+        <a className={styles.info__button} href={item.github} target='blank'>
+          {t('button')}
+        </a>
+      </section>
       <ProjectForm />
       <section className={styles.projects}>
-        <p className={styles.projects__title}>Еще проекты</p>
+        <p className={styles.projects__title}>{t('more')}</p>
         <ProjectsList items={filteredProjects} />
       </section>
     </>
