@@ -27,7 +27,7 @@ const MainPage: FC = () => {
         </div>
         <video
           className={styles.header__video}
-          src={'/videos/main.mp4'}
+          src={'./videos/main.mp4'}
           autoPlay
           loop
           muted
