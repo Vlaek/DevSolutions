@@ -42,7 +42,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/services/[slug].js",
-    "dist/types/**/*.ts"
+    "dist/types/**/*.ts",
+    "/dist/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
