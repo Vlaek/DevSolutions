@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,10 +22,18 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@/app": ["./src/app"],
-      "@/shared": ["./src/shared"],
-      "@/services": ["./src/services"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/app": [
+        "./src/app"
+      ],
+      "@/shared": [
+        "./src/shared"
+      ],
+      "@/services": [
+        "./src/services"
+      ]
     }
   },
   "include": [
@@ -29,7 +41,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/services/[slug].js"
+    "src/app/services/[slug].js",
+    "dist/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
