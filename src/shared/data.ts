@@ -29,7 +29,7 @@ export const serviceList: ILocaleList<IService> = {
         category: 'Mobile',
         description:
           'Учитывая ваши требования, разрабатываем нативные и кроссплатформенные приложения с уникальным дизайном и функционалом, полностью соответствующими вашим требованиям.',
-        videoUrl: '/videos/mobile.mp4',
+        videoUrl: '/videos/mobile.mkv',
         full_stack: [
           'React Native',
           'Fabric',
@@ -137,7 +137,7 @@ export const serviceList: ILocaleList<IService> = {
         subtitle: '',
         description:
           'Мы предлагаем выделенную команду или отдельных специалистов по следующим направлениям:',
-        videoUrl: '/videos/outstaff.mp4',
+        videoUrl: '/videos/outstaff.mkv',
         stack: ['Analytics', 'Design', 'Mobile', 'Web', 'Testing'],
       },
     },
@@ -162,7 +162,7 @@ export const serviceList: ILocaleList<IService> = {
         category: 'Mobile',
         description:
           'Taking into account your requirements, we develop native and cross-platform applications with a unique design and functionality that fully meet your requirements.',
-        videoUrl: '/videos/mobile.mp4',
+        videoUrl: '/videos/mobile.mkv',
         full_stack: [
           'React Native',
           'Fabric',
@@ -269,7 +269,7 @@ export const serviceList: ILocaleList<IService> = {
         category: 'Outstaff',
         subtitle: '',
         description: 'We offer a dedicated team or individuals in the following areas:',
-        videoUrl: '/videos/outstaff.mp4',
+        videoUrl: '/videos/outstaff.mkv',
         stack: ['Analytics', 'Design', 'Mobile', 'Web', 'Testing'],
       },
     },
